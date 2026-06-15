@@ -23,7 +23,8 @@ tags:
   - "social-cohesion"
   - "public-policy"
   - "leadership"
-coverImage: "nathaniel-bowman-DNl3481Nyoc-unsplash.jpg"
+coverImage: "./images/nathaniel-bowman-DNl3481Nyoc-unsplash.jpg"
+excerpt: "Canada’s material footing is strong, yet many citizens feel isolated, over-stretched, and adrift. <em>To Build a Nation’s Heart</em> proposes a practical, non-partisan path to restore purpose, belonging, and trust by giving every Canadian a visible way to help build the country. The strategy advances three mutually reinforcing pillars: <strong>Building People</strong> (a transparent, performance-based volunteer ecosystem where recognition is earned), <strong>Building Force</strong> (technology-centred CAF recruitment with modernized pensions and youth pathways), and <strong>Building Spirit</strong> (a confident culture rooted in First Nations heritage and open to every community, with a neutral public square for all faiths). Success looks like participation becoming identity, stronger CAF capability, newcomers integrating in both rights <strong>and</strong> responsibilities, and rising trust in institutions."
 ---
 
 ### Nation-Building through Participation, Service, and Shared Culture

@@ -8,7 +8,8 @@ tags:
   - "cosmology"
   - "physics"
   - "space"
-coverImage: "pexels-elenlackner-8494258.jpg"
+coverImage: "./images/pexels-elenlackner-8494258.jpg"
+excerpt: "This model introduces a fracture-mechanics driven framework for the collapse of massive stars, proposing that repeated internal momentum cascades, initiated long before core fusion ends, seed fracture planes that govern subsequent collapse behavior. Micro black hole nucleation, hierarchical mergers, and internal mechanical stability create multiple potential collapse outcomes — from stable neutron stars to delayed black hole formation. The model offers a novel unification of supernova dynamics, neutron star mass thresholds, and gravitational wave event predictions, built entirely within known physics but extending existing theoretical models."
 ---
 
 #### _Proposed by Rupendra Dhillon. | Formalized with Luma (ChatGPT)_
@@ -247,6 +248,6 @@ This Tensile Fracture Cascade Model proposes that black hole formation may not b
 
 ### **Supplemental Documentation**
 
-- [Scientific Novelty Statement — June 2025 (PDF)](/s/Scientific-Novelty-Statement-for-the-Tensile-Fracture-Cascade-Model-of-Stellar-Collapse.pdf)
+- [Scientific Novelty Statement — June 2025 (PDF)](/downloads/first-principles/2025-06-01-tensile-fracture-cascade-model-of-stellar-collapse/Scientific+Novelty+Statement+for+the+Tensile+Fracture+Cascade+Model+of+Stellar+Collapse.pdf)
     
-- [Full Model Document — Tensile Fracture Cascade Model v1.0 (PDF)](/s/The-Tensile-Fracture-Cascade-Model-of-Black-Hole-Formation.pdf)
+- [Full Model Document — Tensile Fracture Cascade Model v1.0 (PDF)](/downloads/first-principles/2025-06-01-tensile-fracture-cascade-model-of-stellar-collapse/The+Tensile+Fracture+Cascade+Model+of+Black+Hole+Formation.pdf)

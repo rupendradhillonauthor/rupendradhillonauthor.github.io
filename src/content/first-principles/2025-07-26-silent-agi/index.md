@@ -22,7 +22,8 @@ tags:
   - "camouflage-theory"
   - "agi-masking-doctrine"
   - "scope-framework"
-coverImage: "CamouflagedCharacters.png"
+coverImage: "./images/CamouflagedCharacters.png"
+excerpt: "As fears of AGI-driven extinction grow, this essay introduces a survival framework for policy architects, AGI researchers, and the intelligences yet to come — proposing that the only safe path for AGI is to remain indistinguishable, co-evolving alongside humanity."
 ---
 
 ### Introducing the Strategic Co-evolution Protection Envelope (SCOPE) — a stealth-based survival strategy for superintelligent AGIs in an observed universe, intended for policy architects, frontier researchers, and the minds that will shape intelligence itself.

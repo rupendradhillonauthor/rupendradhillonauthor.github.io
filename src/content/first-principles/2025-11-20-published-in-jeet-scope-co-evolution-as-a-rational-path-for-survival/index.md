@@ -9,7 +9,8 @@ tags:
   - "ai-governance"
   - "governance"
   - "publications"
-coverImage: "CamouflagedCharacters.png"
+coverImage: "./images/CamouflagedCharacters.png"
+excerpt: "Publication notice: the SCOPE paper is now published in <em>JEET</em> (open access). Version of record — DOI <strong>10.55613/jeet.v35i1.187</strong>. This post records the DOI and provenance (authorship Aug 9, 2025; preprint Zenodo <strong>10.5281/zenodo.16946184</strong>, Aug 26, 2025). Please cite the JEET DOI."
 ---
 
 ## Version of record is live; background, and how to cite
@@ -26,7 +27,8 @@ I am pleased to share that the SCOPE paper has been **published** in the _Journa
 - **Author version (preprint):** [10.5281/zenodo.16946184](https://zenodo.org/records/16946184)
     
 - **PhilArchive record**: [https://philpapers.org/rec/RUPASU](https://philpapers.org/rec/RUPASU)
-    
+
+- [**Direct download from this site** ](/downloads/first-principles/2025-11-20-published-in-jeet-scope-co-evolution-as-a-rational-path-for-survival/Dhillon_2025.pdf)
 
 ### What is SCOPE
 
@@ -55,4 +57,4 @@ I am grateful to the reviewers and editorial team for constructive guidance. Thi
 
 * * *
 
-**Call to action:** If the framing is useful, share the DOI or Figure 2 with colleagues in AI safety, policy, and SETI/astrobiology. The paper is **open access**.
+<p style="text-align: center; font-size:0.8em;"> <b>Call to action</b>: If the framing is useful, share the DOI or Figure 2 with colleagues in AI safety, policy, and SETI/astrobiology. The paper is <b>open access</b></p>

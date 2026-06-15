@@ -8,7 +8,8 @@ tags:
   - "proposal"
   - "2025"
   - "economics"
-coverImage: "pexels-andre-furtado-43594-3021055.jpg"
+coverImage: "./images/pexels-andre-furtado-43594-3021055.jpg"
+excerpt: "<em>Tourism is no longer just leisure — it is strategy.</em><br>Canada has a once-in-a-generation opportunity to transform tourism into a long-term engine for economic strength, cultural connection, and environmental leadership. This proposal outlines how — through smart policy, local empowerment, and purpose-driven design — tourism can help fuel Canada’s future."
 ---
 
 ### Fueling Canada's Future — Economic Strength Through Purpose-Driven Tourism

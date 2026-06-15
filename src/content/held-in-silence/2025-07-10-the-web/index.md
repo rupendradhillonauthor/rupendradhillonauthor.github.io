@@ -10,7 +10,8 @@ tags:
   - "witness"
   - "silence"
   - "grief"
-coverImage: "unsplash-image-NnthSp3BzBY.jpg"
+coverImage: "./images/unsplash-image-NnthSp3BzBY.jpg"
+excerpt: "<em>A quiet witnessing of what may happen to a spider when the world moves through her without&nbsp;noticing.</em>"
 ---
 
 

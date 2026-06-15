@@ -7,7 +7,8 @@ tags:
   - "evolutionary-biology"
   - "human-body"
   - "nature"
-coverImage: "SoundWaves-WebOptimized.jpg"
+coverImage: "./images/SoundWaves-WebOptimized.jpg"
+excerpt: "One of the things that has made us a successful species is the capabilities of our minds to abstract out unimportant details to help us see the big picture. However, in doing so most of us end up forgetting just how complicated and awe inspiring some things that we take for granted are. Lately I was reading something that made me think about the process of hearing and thinking about it more closely made me experience such awe at the complexity of this sense we take for granted almost since the moment we are born. "
 ---
 
 One of the things that has made us a successful species is the capabilities of our minds to abstract out unimportant details to help us see the big picture. However, in doing so most of us end up forgetting just how complicated and awe inspiring some things that we take for granted are. Lately I was reading something that made me think about the process of hearing and thinking about it more closely made me experience such awe at the complexity of this sense we take for granted almost since the moment we are born.

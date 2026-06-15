@@ -11,12 +11,14 @@ interface Props {
   title?: string;
   description?: string;
   pageType?: "wide" | "narrow" | "standard";
+  backgroundColor?: string; // 1. Added the prop here
 }
 
 const {
   title = SITE_TITLE,
   description = SITE_DESCRIPTION,
   pageType = "standard",
+  backgroundColor = "transparent", // 2. Set a safe default
 } = Astro.props;
 ---
 
@@ -27,10 +29,16 @@ const {
       title={title === SITE_TITLE ? title : `${title} | ${SITE_TITLE}`}
       description={description}
     />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Rupendra Dhillon"
+      href="/rss.xml"
+    />
   </head>
-  <body>
+  <body style={`background-color: ${backgroundColor};`}>
     <div class="base-layout-container">
-      <Header backgroundColor="var(--canvas-landing)" />
+      <Header backgroundColor={backgroundColor} />
 
       <div class="editorial-page-content has-section-divider">
         <div class="layout-content-inner">
@@ -44,6 +52,7 @@ const {
             class="section-divider-svg"
             viewBox="0 0 1200 72"
             preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
               class="divider-jagged-path"
@@ -52,7 +61,6 @@ const {
           </svg>
         </div>
       </div>
-
       <Footer />
     </div>
   </body>

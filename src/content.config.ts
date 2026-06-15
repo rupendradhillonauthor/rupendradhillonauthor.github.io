@@ -21,11 +21,12 @@ import { z } from 'astro/zod';
 // 1. First Principles Collection (Physics & Math)
 const firstPrinciples = defineCollection({
 	loader: glob({ pattern: '**/index.{md,mdx}', base: './src/content/first-principles' }),
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
 		date: z.coerce.date(), // Matches your real "date" key
 		tags: z.array(z.string()).optional(), // Captures your list of tags cleanly
-		coverImage: z.string().optional(), // Matches your real "coverImage" key
+		coverImage: image().optional(), // Matches your real "coverImage" key
+		excerpt: z.string().optional(),
 	}),
 });
 

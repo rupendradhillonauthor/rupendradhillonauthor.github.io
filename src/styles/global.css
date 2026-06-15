@@ -2,22 +2,21 @@
 
 :root {
   /* Core Base Colors */
-  --color-text-dark: rgb(0, 0, 0);
-  --color-text-light: #ffffff;
-  --color-text-muted: #444444;
+  --color-text-dark: hsl(0, 0%, 0%);
+  --color-text-light: hsl(0, 0%, 100%);
+  --color-text-muted: hsl(0, 0%, 27%);
   --color-border-dark: hsla(0, 0%, 0%, 1);
-  --color-footer-hover: rgb(104, 104, 104);
+  --color-footer-hover: hsl(0, 0%, 41%);
 
   /* UPDATED MASTER CANVAS COLOR
      Swapping out the pale #f6f3eb for the richer, deeper tone 
      matching your live site footprint screenshots.
   */
   --canvas-landing: hsla(42, 35.71%, 94.51%, 1);
-
   /* Other archive collection baselines */
-  --canvas-principles: hsla(42, 35.71%, 94.51%, 1);
-  --canvas-compass: #dbd7cc;
-  --canvas-silence: #ece9df;
+  --canvas-principles: hsl(0, 0%, 100%);
+  --canvas-compass: hsl(44, 17%, 83%);
+  --canvas-silence: hsl(46, 25%, 90%);
 
 }
 
@@ -26,9 +25,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-
-  /* Bind the corrected tone right to the global body paint layer */
-  background-color: var(--canvas-landing) !important;
   color: var(--color-text-dark);
   font-family: Georgia, serif;
   line-height: 1.75;

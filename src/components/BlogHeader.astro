@@ -1,0 +1,60 @@
+---
+// src/components/BlogHeader.astro
+interface Props {
+  title: string;
+  manifesto: string;
+  // Logo layout props (Optional)
+  logoSrc?: string;
+  logoAlt?: string;
+  logoWidth?: string;
+  // Hero layout props (Optional)
+  heroImageSrc?: string;
+  heroImageAlt?: string;
+}
+
+const {
+  title,
+  manifesto,
+  logoSrc,
+  logoAlt,
+  logoWidth = "80",
+  heroImageSrc,
+  heroImageAlt,
+} = Astro.props;
+
+import "../styles/components/BlogHeader.css";
+---
+
+<header class={`blog-publication-header ${heroImageSrc ? "has-hero" : ""}`}>
+  {/* Condition 1: Render the Hero Image if provided */}
+  {
+    heroImageSrc && (
+      <div class="publication-hero-wrapper">
+        <img
+          src={heroImageSrc}
+          alt={heroImageAlt}
+          class="publication-hero-image"
+        />
+      </div>
+    )
+  }
+
+  {
+    /* Condition 2: Render the small Logo if provided (and no hero image exists) */
+  }
+  {
+    logoSrc && !heroImageSrc && (
+      <img
+        src={logoSrc}
+        alt={logoAlt}
+        class="publication-logo"
+        style={`--logo-w: ${logoWidth}px;`}
+      />
+    )
+  }
+
+  <div class="publication-text-content">
+    <h1 class="publication-title">{title}</h1>
+    <p class="publication-manifesto">{manifesto}</p>
+  </div>
+</header>

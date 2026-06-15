@@ -1,0 +1,75 @@
+---
+// src/components/AlternatingPostList.astro
+import { Image } from "astro:assets"; // 1. Import Astro's Image component
+import "../styles/components/AlternatingPostList.css";
+
+interface Post {
+  collection: string;
+  id: string;
+  data: {
+    title: string;
+    date: Date | string;
+    tags?: string[];
+    coverImage?: ImageMetadata;
+    excerpt?: string;
+  };
+}
+
+interface Props {
+  posts: Post[];
+  backgroundColor?: string;
+}
+
+const { posts, backgroundColor = "transparent" } = Astro.props;
+
+const formatDate = (date: Date | string) => {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+};
+---
+
+<section
+  class="alternating-post-list"
+  style={`background-color: ${backgroundColor};`}
+>
+  {
+    posts.map((post, index) => (
+      <article class={`alt-post-row ${index % 2 !== 0 ? "reverse" : ""}`}>
+        <div class="alt-image-col">
+          <a href={`/${post.collection}/${post.id}/`}>
+            {post.data.coverImage ? (
+              <Image
+                src={post.data.coverImage}
+                alt={post.data.title}
+                class="alt-post-img"
+                width={680}
+                height={680}
+              />
+            ) : (
+              <img
+                src="/images/placeholder.jpg"
+                alt="No image"
+                class="alt-post-img"
+              />
+            )}
+          </a>
+        </div>
+
+        <div class="alt-text-col">
+          <p class="alt-post-date">{formatDate(post.data.date)}</p>
+          <h2 class="alt-post-title">
+            <a href={`/${post.collection}/${post.id}/`}>{post.data.title}</a>
+          </h2>
+          <p class="alt-post-excerpt" set:html={post.data.excerpt || ""} />
+          <a href={`/${post.collection}/${post.id}/`} class="alt-read-more">
+            Read More &rarr;
+          </a>
+        </div>
+      </article>
+    ))
+  }
+</section>

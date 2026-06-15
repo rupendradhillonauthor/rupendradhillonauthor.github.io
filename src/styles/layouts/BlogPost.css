@@ -1,0 +1,147 @@
+/* src/styles/layouts/BlogPostLayout.css */
+
+.blog-post-article {
+  max-width: 1450px;
+  /* Optimal reading width */
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem 2rem;
+}
+
+/* Back Navigation */
+.post-back-nav {
+  margin-bottom: 3rem;
+}
+
+.back-link {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #000;
+}
+
+/* Header Elements */
+.post-header {
+  margin-bottom: 4rem;
+}
+
+.post-title {
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  color: #111;
+}
+
+.post-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0 0 1rem 0;
+}
+
+.post-date {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 2.5rem 0;
+}
+
+/* Cover Image */
+.post-cover-wrapper {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.post-cover-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  /* Optional: adds a tiny, polished curve to the image corners */
+  object-fit: cover;
+}
+
+/* Markdown Content Styling (.post-content targets all the raw markdown tags) */
+.post-content {
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #222;
+}
+
+.post-content p {
+  margin-bottom: 1.8rem;
+}
+
+.post-content h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  margin: 3rem 0 1.5rem 0;
+  color: #111;
+}
+
+.post-content blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #555;
+}
+
+.post-content a {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.post-navigation {
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid #eee;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-prev,
+.nav-next {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #333;
+  width: 45%;
+}
+
+.nav-next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.nav-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.nav-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.nav-prev:hover .nav-title,
+.nav-next:hover .nav-title {
+  color: #000;
+}

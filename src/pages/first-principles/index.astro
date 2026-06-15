@@ -1,0 +1,36 @@
+---
+// src/pages/first-principles/index.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogHeader from "../../components/BlogHeader.astro";
+import AlternatingPostList from "../../components/AlternatingPostList.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("first-principles").catch(() => []);
+
+// Updated sorting to use b.data.date instead of b.data.pubDate
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
+
+// Define your theme color for this specific publication here
+const publicationThemeColor = "var(--canvas-principles)";
+---
+
+<BaseLayout
+  title="First Principles"
+  pageType="wide"
+  backgroundColor={publicationThemeColor}
+>
+  <BlogHeader
+    title="First Principles"
+    manifesto="Here, no idea is too early, too strange, or too foundational to question. A space for deep, unhurried thought — a search for clarity at the intersection of physics, mind, meaning, and method."
+    logoSrc="/images/2025-11-20-landing/Logo+-+Minimal+-+Transparent.png"
+    logoAlt="First Principles Logo"
+    logoWidth="60"
+  />
+
+  <AlternatingPostList
+    posts={sortedPosts}
+    backgroundColor={publicationThemeColor}
+  />
+</BaseLayout>

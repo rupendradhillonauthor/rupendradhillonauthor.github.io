@@ -12,7 +12,8 @@ tags:
   - "leadership-development"
   - "party-strategy"
   - "citizen-participation"
-coverImage: "pexels-element5-1550337.jpg"
+coverImage: "./images/pexels-element5-1550337.jpg"
+excerpt: "Politics has lost much of its original purpose - serving people and building community - and become too focused on winning the next election. Traditional outreach methods like door knocking and cold calls no longer work in a world shaped by mobility, digital habits, and shrinking attention spans. This article explores a new approach: treating citizens as partners in a journey from casual participants to trusted leaders, and replacing outdated tactics with genuine, long-term community engagement."
 ---
 
 #### Download Leadership Brief [here](/s/Reshaping-Voter-Outreach-for-a-New-Generation-Leadership-Brief.pdf).
