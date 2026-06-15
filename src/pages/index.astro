@@ -1,49 +1,178 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+// src/pages/index.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogCard from "../components/BlogCard.astro";
+
+// Import the dedicated page stylesheet
+import "../styles/pages/index.css";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+<!-- ---
+// src/pages/index.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import EditorialGridCard from "../components/EditorialGridCard.astro";
+
+// Import its isolated, dedicated style sheet explicitly
+import "../styles/pages/index.css";
+---
+
+<BaseLayout pageType="wide">
+	<header class="manifesto-section">
+		<h2 class="tagline">
+			I write to unravel patterns — in myth, mind, and matter.
+		</h2>
+		<p class="author-sub">
+			Author. Systems thinker. Stranger in Stranger Lands.
+		</p>
+	</header>
+
+	<div class="editorial-grid">
+		<EditorialGridCard
+			title="First Principles"
+			iconSrc="/images/2025-11-20-landing/Logo+-+Minimal+-+Transparent.png"
+			exploreUrl="/first-principles"
+			linkText="Explore the Blog →"
+			alignLink="left"
+		>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
+				Here, no idea is too early, too strange, or too foundational to
+				question. A space for deep, unhurried thought — a search for clarity at
+				the intersection of physics, mind, meaning, and method.
 			</p>
+			<p>Not answers, but frameworks. Not noise, but signals worth chasing.</p>
+		</EditorialGridCard>
+
+		<EditorialGridCard
+			title="Northern Compass"
+			iconSrc="/images/2025-11-20-landing/Logo+-+Transparent+BG+-+BW+needle.png"
+			exploreUrl="/northern-compass"
+			linkText="Explore Perspectives →"
+			alignLink="right"
+			isCompass={true}
+		>
 			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
+				Thoughts on direction and consequence in Canadian politics – from forces
+				that shape everyday life to decisions that define Canada’s role in the
+				world.
 			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
+		</EditorialGridCard>
+
+		<EditorialGridCard
+			title="Held in Silence"
+			iconSrc="/images/2025-11-20-landing/Logo3.png"
+			exploreUrl="/held-in-silence"
+			linkText="Enter stillness →"
+			alignLink="right"
+		>
 			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+				A space for the smallest stillness and the fiercest quiet. A haunt of
+				voices that tremble, rage, or rest – each entered in silence, and
+				remaining.
 			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+			<p>Here, poetry listens first.</p>
+		</EditorialGridCard>
+	</div>
+
+	<section class="book-showcase-container">
+		<div class="book-inner-layout">
+			<div class="book-cover-frame">
+				<a href="/magnificent-tales-book">
+					<img
+						src="/images/2025-11-20-landing/Magnificent+Tales+of+Doomed+Kingdoms_Front+Cover_V2_JPG.jpg"
+						alt="Book Cover"
+					/>
+				</a>
+			</div>
+			<div class="book-prose-frame">
+				<h2>Magnificent Tales of Doomed Kingdoms</h2>
+				<p>
+					Experience the personal struggles of the rulers trying to bring up
+					their children so that they can become rightful rulers in a world
+					surrounded by their enemies. A telling of victories that are worth
+					nothing compared to the unrecoverable losses. Let your mind witness
+					acts that would otherwise be considered unimaginable and of the turns
+					of fate that can spell disaster for the kingdom.
+				</p>
+				<div class="action-row-right">
+					<a class="explore-link" href="/magnificent-tales-book"
+						>Explore details →</a
+					>
+				</div>
+			</div>
+		</div>
+	</section>
+</BaseLayout> -->
+<BaseLayout title="Home" pageType="standard">
+	<header class="manifesto-section">
+		<h2 class="tagline">
+			I write to unravel patterns — in myth, mind, and matter.
+		</h2>
+		<p class="author-sub">
+			Author. Systems thinker. Stranger in Stranger Lands.
+		</p>
+	</header>
+
+	<section class="blog-directory-grid">
+		<BlogCard
+			title="First Principles"
+			url="/first-principles"
+			excerpt1="Here, no idea is too early, too strange, or too foundational to question. A space for deep, unhurried thought — a search for clarity at the intersection of physics, mind, meaning, and method."
+			excerpt2="Not answers, but frameworks. Not noise, but signals worth chasing."
+			linkText="Explore the Blog"
+			imageSrc="/images/2025-11-20-landing/Logo+-+Minimal+-+Transparent.png"
+			imageAlt="Ocean waves crashing against rocks"
+			imageHeight="106.6"
+			imageWidth="47.8"
+		/>
+		<BlogCard
+			title="Northern Compass"
+			url="/northern-compass"
+			excerpt1="Thoughts on direction and consequence in Canadian politics – from forces that shape everyday life to decisions that define Canada’s role in the world."
+			linkText="Explore Perspectives"
+			imageSrc="/images/2025-11-20-landing/Logo+-+Transparent+BG+-+BW+needle.png"
+			imageAlt="A brass compass pointing north"
+			imageHeight="106.6"
+			imageWidth="47.8"
+		/>
+		<BlogCard
+			title="Held in Silence"
+			url="/held-in-silence"
+			excerpt1="A space for the smallest stillness and the fiercest quiet. A haunt of voices that tremble, rage, or rest – each entered in silence, and remaining."
+			excerpt2="Here, poetry listens first."
+			linkText="Enter stillness"
+			imageSrc="/images/2025-11-20-landing/Logo3.png"
+			imageAlt="A quiet path through a dense forest"
+			imageHeight="107"
+			imageWidth="106.6"
+		/>
+	</section>
+
+	<section class="hero-book-feature">
+		<div class="book-cover-column">
+			<a href="/magnificent-tales-of-doomed-kingdoms">
+				<img
+					src="https://images.squarespace-cdn.com/content/v1/62b93605415bfd5c9b49056b/1656305158710-2QHXU7LCWG7KHU00545C/Magnificent+Tales+of+Doomed+Kingdoms_Front+Cover_V2_JPG.jpg"
+					alt="Book Cover"
+					class="hero-book-image"
+				/>
+			</a>
+		</div>
+
+		<div class="book-details-column">
+			<h2 class="book-title">Magnificent Tales of Doomed Kingdoms</h2>
+			<div class="book-description">
+				<p>
+					Experience the personal struggles of the rulers trying to bring up
+					their children so that they can become rightful rulers in a world
+					surrounded by their enemies. A telling of victories that are worth
+					nothing compared to the unrecoverable losses. Let your mind witness
+					acts that would otherwise be considered unimaginable and of the turns
+					of fate that can spell disaster for the kingdom.
+				</p>
+			</div>
+			<a href="/magnificent-tales-of-doomed-kingdoms" class="explore-link"
+				>Explore details &rarr;</a
+			>
+		</div>
+	</section>
+</BaseLayout>

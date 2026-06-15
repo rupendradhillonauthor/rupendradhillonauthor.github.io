@@ -1,0 +1,38 @@
+---
+// src/components/BlogCard.astro
+const {
+  title,
+  url,
+  excerpt1,
+  excerpt2,
+  imageSrc,
+  imageAlt,
+  imageHeight,
+  imageWidth,
+  linkText,
+} = Astro.props;
+import "../styles/components/BlogCard.css";
+---
+
+<article class="blog-card">
+  <div class="blog-card-header-row">
+    <a href={url}>
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        class="blog-card-image"
+        loading="lazy"
+        style={`--img-w: ${imageWidth}px; --img-h: ${imageHeight}px;`}
+      />
+    </a>
+    <a class="blog-card-title-link" href={url}>
+      <h2 class="blog-card-title">{title}</h2>
+    </a>
+  </div>
+
+  <div class="blog-card-content">
+    <p class="blog-card-excerpt">{excerpt1}</p>
+    <p class="blog-card-excerpt">{excerpt2}</p>
+    <a href={url} class="blog-card-action">{linkText} &rarr;</a>
+  </div>
+</article>

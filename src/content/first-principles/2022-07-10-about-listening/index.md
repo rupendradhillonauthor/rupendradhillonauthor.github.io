@@ -1,0 +1,47 @@
+---
+title: "About Listening"
+date: 2022-07-10
+tags: 
+  - "evolution"
+  - "science"
+  - "evolutionary-biology"
+  - "human-body"
+  - "nature"
+coverImage: "SoundWaves-WebOptimized.jpg"
+---
+
+One of the things that has made us a successful species is the capabilities of our minds to abstract out unimportant details to help us see the big picture. However, in doing so most of us end up forgetting just how complicated and awe inspiring some things that we take for granted are. Lately I was reading something that made me think about the process of hearing and thinking about it more closely made me experience such awe at the complexity of this sense we take for granted almost since the moment we are born.
+
+I have always wondered how an electronic music speaker, a surface made of some a flexible material, when vibrated at different frequencies can reproduce so many different sounds! What seems even more complicated for my logical brain, is to understand is that when a song is playing, how and which part of that surface vibrated to produce the melody and which part vibrated to produce the lyrics (spoken words) and yet some other part some other instruments (e.g., the drums).
+
+### **Why don’t we see sounds instead of hearing them ???**
+
+When I think about this, it makes me question - Sound – what is it really? Most of us know it’s the vibration of air caused by another vibrating object. But it seems like there is more to it than that. Apparatus in our body is geared towards not only sensing these vibrations but also turning them into easily identifiable packets of information I perceive as sound. I mean, it didn’t necessarily have to be sound. It could have been perceived optically as variations of color! (In fact, some people with this type of synesthesia perceive exactly that – they see colors with sounds!)
+
+But let’s slow down and think about the hardware apparatus our body is using to convert these compressions and rarefactions of air (or a surrounding medium) to sound. [This video](https://upload.wikimedia.org/wikipedia/commons/transcoded/7/72/Journey_of_Sound_to_the_Brain.ogv/Journey_of_Sound_to_the_Brain.ogv.720p.vp9.webm) shows the process in detail. This is fascinating, but its still not the full story!
+
+[Psychoacoustics](https://en.wikipedia.org/wiki/Psychoacoustics) – the study of sound perception, deals in how the electrical impulses received by our brain are interpreted as sound. This, I believe, is where a lot of magic happens using the software provided by our brains.
+
+Remember, that the sound – or more like the electrical signal - coming in the brain, must go through so many steps to make sense – and even there, there are levels of sense it can make. Firstly, we need to realize the fact that all this is happening in almost real-time! You are not really sitting idle for seconds waiting for your brain to take its sweet time to make you aware of this event. In fact, this piece of information is critical to understanding what we said before – why don’t we generally “see” sounds instead of “hearing” them and why it is structured the way it is.
+
+As life evolved on earth, various species have been in a constant battle for survival. Evolution helped those that evolved to take advantage of their surroundings better than others and one of the most important situations to be at an advantage was to make sure not be killed by something else. Any species that hopes to be successful at some level must pass this test quickly.
+
+Now imagine some species that could see sounds. However, in case of a do or die situation, think about the amount of work the brain must do to make the organism aware of this event. Moreover, in any species where this event was not sufficiently and rapidly separated from the background or took time for the organism to see, e.g., a predator hiding in tall grass would have spelled a quick demise for the member of that species.
+
+Given this, it is easy to see why most life evolved to sense the most important events around them using a completely separate channel from vision altogether. This separation ensures that the organism can delegate perception of the most important events to this channel and heavily optimize it for survival related needs such as speed or fidelity depending on the environment in which the species evolved.
+
+### **_Our ear is heavily optimized to reduce the time needed to convert the physical event to a usable signal !_**
+
+The [structure of our ear](https://en.wikipedia.org/wiki/Ear) is heavily optimized to reduce the time needed to convert the physical event to a usable signal and to minimize any processing by relying on direct simulation (rather than relying on interpretation of signal strength of quality, etc.).
+
+The [ossicles bones](https://simple.wikipedia.org/wiki/Ossicles) are like hammers that transmit any vibrations of the ear drum to the inner ear and basically reduce any issues that might have been present in a system where there is a potential lag as the input signal enters the system. The system of bones also reduces (but obviously does not completely eliminate) problems in the quality of signal being transmitted to the inner ear (think of a clear sound being heard as foggy or grainy and hard to distinguish from background). Although we have all experienced this, but it mostly happens in situations (in healthy individuals) where the sound is coming from far (not a life-or-death threat) or in a crowd (again, probability of life-or-death situation is low).
+
+Moving inside, think of [cochlea](https://en.wikipedia.org/wiki/Cochlea) as a device that has multiple sensors for different frequencies that need to be captured. This design is what I mean by relying on direct simulation instead of interpretation. Instead of having a few sets of cilia that have to accommodate signaling multiple frequencies by how much they move (think stronger wind moving the grass more than light wind), the evolution chose separate cilia at different points in a container of a very specific shape (shaped like a snail). This shape allows only the lowest frequencies to reach the cilia near the very center. This again is genius!  To understand how this works I’ll use an analogy, that might not be perfect but gives a fair idea of what might happen. Visualize a corridor of such shape. Now think of shooting a high-speed normal sized tennis ball in that corridor – it will either bounce with the walls and stop somewhere or at the very least slow down considerably before it reaches the center. If there are movable sensors in that corridor, a ball thrown with a high speed might not have enough momentum left to move the innermost sensors. Now imagine a bigger ball, let’s say a football or a basketball thrown in a bit slowly. In this case, they have a higher chance of retaining their momentum to reach and trigger the innermost sensor. Hence as these cilia (sensors) are all acting in parallel and are triggered only by specific frequencies, they do not have to do the task of interpretation of frequencies – that can be left to the brain – Right now the most urgent thing is to get this signal to the brain asap. This also allows the cilia to measure the strength (think loudness) of the signal by how much they bend (rather than using their bending to predict frequencies if it was not for the special shape of the cochlea).
+
+### **_This would have allowed for development of even more advanced brain structures that set the foundations of spoken language_**
+
+All this being said, remember that the sounds being produced around us are not pure signals. This means that a design that would allow consumption and processing of all the data that was received simultaneously (parallel processing) would allow the organism to survive better because the brain can use pattern on the various frequencies received in parallel to decide if this is a sound of a growling predator or some other sound that is not a threat (e.g., cubs playing and growling etc.) This would have allowed for development of even more advanced brain structures that could not only classify the sounds into threat versus nonthreat but also associate meaning with them and to set the foundations of spoken language.
+
+It evolved into a system that in almost real-time splits the cumulative frequencies that the cochlea says it heard into recognizable frequencies that the organism is aware of (e.g. sound of water flowing in the background AND sound of crickets AND sound of footsteps AND sound of breathing AND sound of a predator walking close, etc.). This is not the simplest of things to understand but [this video](https://www.youtube.com/watch?v=spUNpyF58BY) helps. However, what is amazing is that our brains have developed circuits that do it in almost real-time across all our lives. This, in turn, is exactly what allows us our capabilities of auditory abstraction because now thanks to our brains, we have something to abstract (read “ignore”) out. This is the reason why you don’t hear your own breathing, the tick tock of the clock or even the clicking of your mouse most of the time!
+
+All this complexity of engineering, accomplished over millions of years of evolution is humbling to say the least. I hope you get a sense of workhorse your ears are and would be able to give them more respect going forward. Happy listening ! :)

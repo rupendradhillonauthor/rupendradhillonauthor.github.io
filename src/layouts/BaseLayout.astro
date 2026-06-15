@@ -1,0 +1,59 @@
+---
+// src/layouts/BaseLayout.astro
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import "../styles/layouts/BaseLayout.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  pageType?: "wide" | "narrow" | "standard";
+}
+
+const {
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  pageType = "standard",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title === SITE_TITLE ? title : `${title} | ${SITE_TITLE}`}
+      description={description}
+    />
+  </head>
+  <body>
+    <div class="base-layout-container">
+      <Header backgroundColor="var(--canvas-landing)" />
+
+      <div class="editorial-page-content has-section-divider">
+        <div class="layout-content-inner">
+          <main class={`canvas-workspace viewport-${pageType}`}>
+            <slot />
+          </main>
+        </div>
+
+        <div class="section-divider-display">
+          <svg
+            class="section-divider-svg"
+            viewBox="0 0 1200 72"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="divider-jagged-path"
+              d="M0,0 L900,72 L1200,0 L1200,72 L0,72 Z"></path>
+            <path class="divider-jagged-stroke" d="M0,0 L900,72 L1200,0"></path>
+          </svg>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  </body>
+</html>

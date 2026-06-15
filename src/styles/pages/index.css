@@ -1,0 +1,124 @@
+/* src/styles/pages/index.css */
+
+/* Manifesto Copy Blocks */
+.manifesto-section {
+  /* padding: 5rem 0 4rem 0; */
+  padding-top: 2.6rem;
+  padding-bottom: 3rem;
+  /* Centers the entire manifesto block horizontally */
+  margin: 0 auto;
+  /* Centers the text content within the block */
+  text-align: center;
+  max-width: 800px;
+}
+
+.tagline {
+  font-family: 'Georgia', serif;
+  font-size: 1.76rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--color-text-dark);
+}
+
+.author-sub {
+  font-family: 'Georgia', serif;
+  font-weight: 500;
+  font-size: 1.12rem;
+  color: var(--color-text-dark);
+  letter-spacing: 0.05em;
+  padding-top: 1.3rem;
+}
+
+/* src/styles/pages/index.css */
+
+.blog-directory-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* Spreads cards out to use full space */
+  gap: 3rem;
+  max-width: 1450px;
+  /* Wider container for the 'bloomed' look */
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive collapse: switch to column on mobile */
+@media (max-width: 768px) {
+  .blog-directory-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --- Ensure BlogCard stays vertical --- */
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  /* Ensures internal spacing between the icon, title, and text */
+  gap: 1rem;
+}
+
+.hero-book-feature {
+  display: grid;
+  /* Adjusts the ratio: image column is smaller, text column gets more room */
+  grid-template-columns: 300px 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  /* Constrain the overall width to match the live site */
+  margin: 6rem auto 4rem auto;
+  /* Vertical breathing room */
+}
+
+.book-cover-column {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-book-image {
+  /* This is the key: Force the image to a realistic physical book scale */
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+}
+
+.book-details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-title {
+  font-family: Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.book-description {
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #000000;
+  margin: 0;
+  text-align: justify;
+}
+
+.explore-link {
+  font-size: 1.25rem;
+  font-family: Georgia, serif;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-style: italic;
+  text-align: right;
+}

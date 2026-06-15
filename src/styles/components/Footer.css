@@ -1,0 +1,131 @@
+/* src/styles/components/Footer.css */
+
+/* ==========================================================================
+   SOLID BLACK EDITORIAL CENTER-ALIGNED FOOTER
+   ========================================================================== */
+
+.site-footer {
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  box-sizing: border-box;
+  background-color: #000000 !important;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 74.8px;
+  padding-right: 74.8px;
+  box-sizing: border-box;
+  width: 100%;
+
+  /* Switches the entire layout matrix to center-aligned */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* THE ACCENT TOP LINE */
+.footer-accent-line {
+  width: 100%;
+  /* Lengthened rule matching your live screenshot */
+  height: 2px;
+  background-color: var(--canvas-landing);
+  margin-bottom: 2.2rem;
+}
+
+/* HORIZONTAL SOCIAL LINKS MATRIX */
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* Centers the row of icons */
+  align-items: center;
+  gap: 2rem;
+  /* Airy horizontal spacing between the larger icons */
+  margin-bottom: 2.5rem;
+}
+
+/* ICON FILL AND SCALING METRICS */
+.footer-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Expands the clickable target area */
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  background: none;
+}
+
+.social-svg {
+  /* Restores the icons to a large, highly legible format */
+  width: 28px !important;
+  height: 28px !important;
+  fill: var(--color-text-light);
+  transition: fill 0.15s ease;
+}
+
+.footer-icon-link:hover .social-svg {
+  fill: var(--hover-color);
+}
+
+/* Copyright Meta Line Formatting */
+.footer-attribution p {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: var(--color-text-muted-light);
+}
+
+/* ==========================================================================
+   RESPONSIVE VIEWPORT BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .footer-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .footer-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .footer-accent-line {
+    width: 100%;
+    /* Scales the line down slightly for narrow phone screens */
+    margin-bottom: 1.8rem;
+  }
+
+  .footer-socials {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .social-svg {
+    /* Keeps icons prominent but touch-safe on mobile */
+    fill: var(--color-text-light);
+    /* Default color */
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  /* Use the variable defined in the Astro component */
+  .footer-icon-link:hover .social-svg {
+    fill: var(--hover-color);
+  }
+}

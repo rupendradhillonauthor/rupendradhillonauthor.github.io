@@ -1,0 +1,107 @@
+/* src/styles/layouts/BaseLayout.css */
+
+.base-layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+/* THE EDITORIAL CONTENT WRAPPER
+   Ensures the padding space at the bottom changes dynamically at the exact 
+   same rate as the divider height, preventing overlap.
+*/
+.editorial-page-content.has-section-divider {
+  width: 100%;
+  background-color: var(--canvas-landing);
+  position: relative;
+  padding-bottom: 6vw;
+}
+
+@media (max-width: 768px) {
+  .editorial-page-content.has-section-divider {
+    padding-bottom: 50px;
+    /* Responsive safety floor tracking your minimum limits */
+  }
+}
+
+/* MASTER SIDE MARGIN RAILS */
+.layout-content-inner {
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  /* padding-left: 74.8px;
+  padding-right: 74.8px; */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.canvas-workspace {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   FLUID-ENGINE FIXED-RATIO DIVIDER
+   ========================================================================== */
+
+.section-divider-display {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6vw;
+  /* Dynamically tracks viewport scale */
+  min-height: 50px;
+  max-height: 110px;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+  background-color: transparent;
+
+  /* Minor 1px offset shift to prevent webkit anti-aliasing line gaps at the footer lip */
+  margin-bottom: -1px;
+}
+
+.section-divider-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Fills everything underneath the stroke line with pure black */
+.divider-jagged-path {
+  fill: #000000;
+}
+
+/* Razor sharp hairline boundary border cut line */
+.divider-jagged-stroke {
+  fill: none;
+  stroke: var(--color-text-dark);
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: square;
+}
+
+/* ==========================================================================
+   RESPONSIVE VIEWPORT BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .layout-content-inner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-content-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .section-divider-display {
+    height: 50px;
+    /* Locks mobile scaling down to match padding limits safely */
+  }
+}

@@ -1,0 +1,42 @@
+---
+// src/components/EditorialGridCard.astro
+interface Props {
+  title: string;
+  iconSrc: string;
+  iconAlt?: string;
+  exploreUrl: string;
+  linkText: string;
+  alignLink?: "left" | "right";
+  isCompass?: boolean; // For handling specific needle height adjustments
+}
+
+const {
+  title,
+  iconSrc,
+  iconAlt = "",
+  exploreUrl,
+  linkText,
+  alignLink = "left",
+  isCompass = false,
+} = Astro.props;
+
+// Import its isolated, dedicated style sheet explicitly
+import "../styles/components/EditorialGridCard.css";
+---
+
+<section class="grid-column">
+  <div class="column-header">
+    <img
+      src={iconSrc}
+      alt={iconAlt}
+      class={`inline-icon ${isCompass ? "needle-adjust" : ""}`}
+    />
+    <h2>{title}</h2>
+  </div>
+  <div class="column-body">
+    <slot />
+    <div class={`action-row-${alignLink}`}>
+      <a class="explore-link" href={exploreUrl}>{linkText}</a>
+    </div>
+  </div>
+</section>

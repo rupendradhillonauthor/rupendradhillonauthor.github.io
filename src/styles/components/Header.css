@@ -1,0 +1,218 @@
+/* src/styles/components/Header.css */
+
+/* ==========================================================================
+   PIXEL-PERFECT EDITORIAL HEADER BAND USING CSS CONSTANTS
+   ========================================================================== */
+
+.editorial-header {
+  width: 100%;
+  padding-top: 20.5667px;
+  padding-bottom: 20.5667px;
+  padding-left: 74.8px;
+  padding-right: 74.8px;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100;
+
+  background-color: var(--header-bg) !important;
+  border-bottom: 1px solid var(--color-border-dark) !important;
+  box-shadow: 0px 20px 16px -9px rgba(0, 0, 0, 0.25) !important;
+}
+
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  /* Keeps the brand title and hamburger stack pinned on top of the takeover canvas */
+}
+
+.header-banner {
+  text-align: center;
+  flex: 1;
+}
+
+.header-banner h1 {
+  margin: 0;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 49.6px;
+  letter-spacing: 0.992px;
+  line-height: 69.4333px;
+}
+
+.header-banner h1 a {
+  color: var(--color-text-dark);
+  text-decoration: none;
+}
+
+.header-tagline {
+  margin: 0.01rem 0 0 0;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.2px;
+}
+
+/* Desktop Navigation Layout */
+.header-nav {
+  max-width: 1200px;
+  margin: 1.3rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  letter-spacing: 0.384px !important;
+}
+
+.header-nav a {
+  cursor: pointer;
+  display: flex;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19.2px;
+  letter-spacing: 0.384px !important;
+  word-spacing: normal !important;
+  line-height: 26.8833px;
+  color: var(--color-text-dark);
+  text-decoration: none;
+  padding: 0.1rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+.header-nav a:hover {
+  border-bottom: 1px solid var(--color-text-dark);
+}
+
+/* Hamburger UI Control Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  z-index: 1100;
+  /* Ensures the icon stays accessible to toggle back closed */
+}
+
+.hamburger-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text-dark);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* ==========================================================================
+   RESPONSIVE VIEWPORT BREAKPOINTS (FULL-SCREEN TAKEOVER ACTIVATED)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .editorial-header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .editorial-header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .header-banner {
+    text-align: left;
+    flex: 1;
+  }
+
+  .header-banner h1 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.4px;
+  }
+
+  .header-tagline {
+    text-align: left;
+    font-size: 0.95rem;
+    margin-top: 0.3rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: 1rem;
+  }
+
+  /* IMMERSIVE FULL-SCREEN MOBILE OVERLAY
+     Pours seamlessly over 100% of the active viewport boundaries,
+     matching the layout from image_f487d7.png perfectly.
+  */
+  .header-nav {
+    display: flex;
+    position: fixed;
+    /* Anchors relative strictly to the viewport window framing */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 500;
+    /* Rests safely between background layers and content text rows */
+
+    flex-direction: column;
+    justify-content: center;
+    /* Vertically aligns link collection array to dead center */
+    align-items: center;
+    gap: 2.2rem;
+    /* Airy editorial spacing between structural text tracks */
+
+    background-color: var(--header-bg) !important;
+    /* Locks background matching directly */
+
+    /* Clean transition state bindings */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  }
+
+  /* Takeover Menu State Trigger Triggered Active */
+  .header-nav.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-nav a {
+    font-size: 24px;
+    /* Scaled up layout presence matching your full-screen snapshot */
+    line-height: 34px;
+    letter-spacing: 0.5px !important;
+    padding: 0.5rem 0;
+  }
+
+  /* Hamburger Animating Transform Hooks */
+  .menu-toggle.is-active .hamburger-bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle.is-active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-active .hamburger-bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}

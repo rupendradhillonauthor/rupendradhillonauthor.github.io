@@ -1,0 +1,63 @@
+/* src/styles/components/EditorialGridCard.css */
+
+.grid-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 0.5rem;
+}
+
+.column-header h2 {
+  font-size: 1.65rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.inline-icon {
+  height: 1.9rem;
+  width: auto;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.inline-icon.needle-adjust {
+  height: 2.3rem;
+}
+
+.column-body p {
+  font-size: 1.08rem;
+  line-height: 1.85rem;
+  margin: 0 0 1.5rem 0;
+  color: #222;
+}
+
+.action-row-left {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.action-row-right {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.explore-link {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.explore-link:hover {
+  border-bottom-color: #000000;
+}
