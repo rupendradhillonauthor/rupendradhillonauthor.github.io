@@ -14,7 +14,7 @@ excerpt: "<em>Tourism is no longer just leisure — it is strategy.</em><br>Cana
 
 ### Fueling Canada's Future — Economic Strength Through Purpose-Driven Tourism
 
-[Executive Summary - PDF](/s/Executive-Summary-A-National-Strategy-to-Strengthen-Canada-Through-Tourism-v1.pdf) | [Full Proposal - PDF](/s/Full-Proposal-A-National-Strategy-to-Strengthen-Canada-Through-Tourism.pdf)
+[Executive Summary - PDF](/downloads/Northern%20Compass/2025-07-07-national-strategy-to-strengthen-canada-through-tourism/Executive+Summary+-+A+National+Strategy+to+Strengthen+Canada+Through+Tourism+-+v1.pdf) | [Full Proposal - PDF](/downloads/Northern%20Compass/2025-07-07-national-strategy-to-strengthen-canada-through-tourism/Full+Proposal+-+A+National+Strategy+to+Strengthen+Canada+Through+Tourism.pdf)
 
 ## Overview
 

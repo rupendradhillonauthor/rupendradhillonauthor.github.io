@@ -29,7 +29,7 @@ excerpt: "Canada’s material footing is strong, yet many citizens feel isolated
 
 ### Nation-Building through Participation, Service, and Shared Culture
 
-Executive Summary ([PDF](/s/To-Build-a-Nations-Heart-Executive-Summary.pdf)), Full article ([PDF](/s/To-Build-a-Nations-Heart-Full-Proposal.pdf))
+Executive Summary ([PDF](/downloads/Northern%20Compass/2025-08-23-to-build-a-nations-heart/To+Build+a+Nation's+Heart+-+Executive+Summary.pdf)), Full article ([PDF](/downloads/Northern%20Compass/2025-08-23-to-build-a-nations-heart/To+Build+a+Nation's+Heart+-+Full+Proposal.pdf))
 
 ## Introduction
 

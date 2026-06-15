@@ -12,13 +12,6 @@
   gap: 1.5rem;
 }
 
-/* --- Logo Variant Styles --- */
-.publication-logo {
-  width: var(--logo-w, 80px);
-  height: auto;
-  object-fit: contain;
-}
-
 /* --- Hero Image Variant Styles --- */
 .publication-hero-wrapper {
   width: 100%;
@@ -36,19 +29,33 @@
 }
 
 /* --- Shared Text Styles --- */
-.publication-text-content {
-  max-width: 800px;
-  /* Keeps the text highly readable */
+.publication-text-content-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+
+.logo-title-row {
+  display: flex;
+  /* Makes the logo and title sit side-by-side */
+  align-items: center;
+  /* Vertically aligns logo and title text */
+  gap: 1rem;
+  /* Spacing between logo and title */
+}
+
+.publication-logo {
+  object-fit: contain;
+  width: var(--logo-w, 120px);
+  height: auto;
+  padding-right: 3rem;
 }
 
 .publication-title {
   font-family: Georgia, serif;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #000000;
   margin: 0;
 }

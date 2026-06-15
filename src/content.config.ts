@@ -33,11 +33,12 @@ const firstPrinciples = defineCollection({
 // 2. Northern Compass Collection (Geopolitics Essays)
 const northernCompass = defineCollection({
 	loader: glob({ pattern: '**/index.{md,mdx}', base: './src/content/northern-compass' }),
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
-		date: z.coerce.date(),
-		tags: z.array(z.string()).optional(),
-		coverImage: z.string().optional(),
+		date: z.coerce.date(), // Matches your real "date" key
+		tags: z.array(z.string()).optional(), // Captures your list of tags cleanly
+		coverImage: image().optional(), // Matches your real "coverImage" key
+		excerpt: z.string().optional(),
 	}),
 });
 

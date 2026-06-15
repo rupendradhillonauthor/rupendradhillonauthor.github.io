@@ -17,7 +17,7 @@ const {
   manifesto,
   logoSrc,
   logoAlt,
-  logoWidth = "80",
+  logoWidth = "120",
   heroImageSrc,
   heroImageAlt,
 } = Astro.props;
@@ -29,12 +29,16 @@ import "../styles/components/BlogHeader.css";
   {/* Condition 1: Render the Hero Image if provided */}
   {
     heroImageSrc && (
-      <div class="publication-hero-wrapper">
+      <div class="publication-hero-wrapper-hero-image">
         <img
           src={heroImageSrc}
           alt={heroImageAlt}
           class="publication-hero-image"
         />
+      </div>
+      <div class="publication-text-content">
+        <h1 class="publication-title">{title}</h1>
+        <p class="publication-manifesto">{manifesto}</p>
       </div>
     )
   }
@@ -44,17 +48,18 @@ import "../styles/components/BlogHeader.css";
   }
   {
     logoSrc && !heroImageSrc && (
-      <img
-        src={logoSrc}
-        alt={logoAlt}
-        class="publication-logo"
-        style={`--logo-w: ${logoWidth}px;`}
-      />
+      <div class="publication-text-content-logo">
+        <div class="logo-title-row">
+          <img
+            src={logoSrc}
+            alt={logoAlt}
+            class="publication-logo"
+            style={`--logo-w: ${logoWidth}px;`}
+          />
+          <h1 class="publication-title">{title}</h1>
+        </div>
+        <p class="publication-manifesto">{manifesto}</p>
+      </div>
     )
   }
-
-  <div class="publication-text-content">
-    <h1 class="publication-title">{title}</h1>
-    <p class="publication-manifesto">{manifesto}</p>
-  </div>
 </header>

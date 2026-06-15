@@ -1,0 +1,36 @@
+---
+// src/pages/northern-compass/index.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogHeader from "../../components/BlogHeader.astro";
+import AlternatingPostList from "../../components/AlternatingPostList.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("northern-compass").catch(() => []);
+
+// Updated sorting to use b.data.date instead of b.data.pubDate
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
+
+// Define your theme color for this specific publication here
+const publicationThemeColor = "var(--canvas-compass)";
+---
+
+<BaseLayout
+  title="First Principles"
+  pageType="wide"
+  backgroundColor={publicationThemeColor}
+>
+  <BlogHeader
+    title="Northern Compass"
+    manifesto="Essays on Canadian politics and foreign policy"
+    logoSrc="/images/2025-11-20-landing/Logo+-+Transparent+BG+-+BW+needle.png"
+    logoAlt="Northern Compass Logo"
+    logoWidth="120"
+  />
+
+  <AlternatingPostList
+    posts={sortedPosts}
+    backgroundColor={publicationThemeColor}
+  />
+</BaseLayout>

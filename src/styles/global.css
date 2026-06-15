@@ -15,7 +15,7 @@
   --canvas-landing: hsla(42, 35.71%, 94.51%, 1);
   /* Other archive collection baselines */
   --canvas-principles: hsl(0, 0%, 100%);
-  --canvas-compass: hsl(44, 17%, 83%);
+  --canvas-compass: hsl(0, 0%, 100%);
   --canvas-silence: hsl(46, 25%, 90%);
 
 }

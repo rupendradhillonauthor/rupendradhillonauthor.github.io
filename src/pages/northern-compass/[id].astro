@@ -1,0 +1,47 @@
+---
+// src/pages/northern-compass/[id].astro
+import { getCollection, render } from "astro:content";
+import BlogPostLayout from "../../layouts/BlogPost.astro";
+
+// 1. Tell Astro which paths to generate based on your markdown files
+export async function getStaticPaths() {
+  const posts = await getCollection("northern-compass");
+
+  // Sort by date (newest first)
+  const sortedPosts = posts.sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  );
+
+  return posts.map((post, index) => ({
+    params: { id: post.id },
+    props: {
+      post,
+      prevPost: sortedPosts[index + 1] || null, // The older post
+      nextPost: sortedPosts[index - 1] || null, // The newer post
+    },
+  }));
+}
+
+// 2. Get the specific post for the current route
+const { post, prevPost, nextPost } = Astro.props;
+
+// 3. Render the markdown into an Astro component (<Content />)
+const { Content } = await render(post);
+
+// Define the theme for this specific publication
+const publicationThemeColor = "var(--canvas-compass)";
+---
+
+<BlogPostLayout
+  title={post.data.title}
+  date={post.data.date}
+  coverImage={post.data.coverImage}
+  excerpt={post.data.excerpt}
+  backgroundColor={publicationThemeColor}
+  backLinkUrl="/northern-compass"
+  backLinkText="Read more Northern Compass"
+  prevPost={prevPost}
+  nextPost={nextPost}
+>
+  <Content />
+</BlogPostLayout>
