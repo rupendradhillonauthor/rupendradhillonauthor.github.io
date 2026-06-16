@@ -25,29 +25,44 @@ const {
 import "../styles/components/BlogHeader.css";
 ---
 
-<header class={`blog-publication-header ${heroImageSrc ? "has-hero" : ""}`}>
-  {/* Condition 1: Render the Hero Image if provided */}
-  {
-    heroImageSrc && (
+{/* Condition 1: Render the Hero Image if provided */}
+{
+  heroImageSrc && logoSrc && (
+    <header class={`blog-publication-header-hero`}>
       <div class="publication-hero-wrapper-hero-image">
         <img
           src={heroImageSrc}
           alt={heroImageAlt}
           class="publication-hero-image"
         />
+        <img
+          src="/images/2025-11-20-landing/Person.jpg"
+          alt="Person"
+          class="hero-center"
+        />
       </div>
-      <div class="publication-text-content">
-        <h1 class="publication-title">{title}</h1>
+      <div class="publication-text-content-hero-image">
+        <div class="logo-title-row">
+          <img
+            src={logoSrc}
+            alt={logoAlt}
+            class="publication-logo-with-hero"
+            style={`--logo-w: ${logoWidth}px;`}
+          />
+          <h1 class="publication-title">{title}</h1>
+        </div>
         <p class="publication-manifesto">{manifesto}</p>
       </div>
-    )
-  }
+    </header>
+  )
+}
 
-  {
-    /* Condition 2: Render the small Logo if provided (and no hero image exists) */
-  }
-  {
-    logoSrc && !heroImageSrc && (
+{
+  /* Condition 2: Render the small Logo if provided (and no hero image exists) */
+}
+{
+  logoSrc && !heroImageSrc && (
+    <header class={`blog-publication-header-logo`}>
       <div class="publication-text-content-logo">
         <div class="logo-title-row">
           <img
@@ -60,6 +75,6 @@ import "../styles/components/BlogHeader.css";
         </div>
         <p class="publication-manifesto">{manifesto}</p>
       </div>
-    )
-  }
-</header>
+    </header>
+  )
+}

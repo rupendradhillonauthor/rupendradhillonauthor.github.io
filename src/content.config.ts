@@ -45,15 +45,14 @@ const northernCompass = defineCollection({
 // 3. Held in Silence Collection (Poetry)
 const heldInSilence = defineCollection({
 	loader: glob({ pattern: '**/index.{md,mdx}', base: './src/content/held-in-silence' }),
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
-		date: z.coerce.date(),
-		tags: z.array(z.string()).optional(),
-		coverImage: z.string().optional(),
+		date: z.coerce.date(), // Matches your real "date" key
+		tags: z.array(z.string()).optional(), // Captures your list of tags cleanly
+		coverImage: image().optional(), // Matches your real "coverImage" key
+		excerpt: z.string().optional(),
 	}),
 });
-
-// export const collections = { blog };
 
 // Export the three true collections to the engine
 export const collections = {

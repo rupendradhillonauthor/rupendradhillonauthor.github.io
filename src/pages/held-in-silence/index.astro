@@ -1,0 +1,36 @@
+---
+// src/pages/first-principles/index.astro
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogHeader from "../../components/BlogHeader.astro";
+import TwoColumnGridList from "../../components/TwoColumnGridList.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("held-in-silence").catch(() => []);
+
+// Updated sorting to use b.data.date instead of b.data.pubDate
+const sortedPosts = posts.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
+
+// Define your theme color for this specific publication here
+const publicationThemeColor = "var(--canvas-principles)";
+---
+
+<BaseLayout
+  title="Held in Silence"
+  pageType="wide"
+  backgroundColor={publicationThemeColor}
+>
+  <BlogHeader
+    title="Held in Silence"
+    manifesto="Where silence becomes a voice."
+    heroImageSrc="/images/2025-11-20-landing/Mountains.jpg"
+    logoSrc="/images/2025-11-20-landing/Logo3.png"
+    logoWidth="150"
+  />
+
+  <TwoColumnGridList
+    posts={sortedPosts}
+    backgroundColor={publicationThemeColor}
+  />
+</BaseLayout>

@@ -1,11 +1,22 @@
 /* src/styles/components/BlogHeader.css */
 
-.blog-publication-header {
+.blog-publication-header-logo {
   text-align: center;
   /* We remove the global max-width so the hero image can span wider if needed */
   width: 100%;
   margin: 0 auto;
-  padding: 6rem 2rem 5rem 2rem;
+  padding: 2rem 2rem 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.blog-publication-header-hero {
+  text-align: center;
+  /* We remove the global max-width so the hero image can span wider if needed */
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,11 +24,23 @@
 }
 
 /* --- Hero Image Variant Styles --- */
-.publication-hero-wrapper {
+.publication-hero-wrapper-hero-image {
+  position: relative;
   width: 100%;
-  max-width: 1000px;
-  /* Wider than the text for an editorial feel */
-  margin-bottom: 1rem;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  /* Adjust size of person */
+  z-index: 2;
+  /* Keeps the person in front of the background */
 }
 
 .publication-hero-image {
@@ -26,6 +49,18 @@
   /* Creates a beautiful, cinematic wide crop */
   object-fit: cover;
   display: block;
+}
+
+.publication-text-content-hero-image {
+  position: absolute;
+  top: 8%;
+  /* Adjust this to move it vertically */
+  right: 6%;
+  /* Adjust this to move it toward the right side */
+  width: 550px;
+  /* Keep it constrained so the text wraps */
+  z-index: 3;
+  color: #000;
 }
 
 /* --- Shared Text Styles --- */
@@ -47,9 +82,15 @@
 
 .publication-logo {
   object-fit: contain;
-  width: var(--logo-w, 120px);
+  width: var(--logo-w);
   height: auto;
-  padding-right: 3rem;
+  padding-right: 1rem;
+}
+
+.publication-logo-with-hero {
+  object-fit: contain;
+  width: var(--logo-w);
+  height: auto;
 }
 
 .publication-title {
@@ -64,6 +105,7 @@
   font-size: 1.25rem;
   line-height: 1.6;
   color: #000000;
-  margin: 0;
+  margin-left: 7rem;
+  margin-top: -30px;
   font-style: italic;
 }

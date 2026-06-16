@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets"; // 1. Import Astro's Image component
+import "../styles/components/TwoColumnGridList.css";
+
+// src/components/TwoColumnGridList.astro
+interface Post {
+  collection: string;
+  id: string;
+  data: {
+    title: string;
+    date: Date | string;
+    tags?: string[];
+    coverImage?: ImageMetadata;
+    excerpt?: string;
+  };
+}
+
+interface Props {
+  posts: Post[];
+  backgroundColor?: string;
+}
+
+const { posts, backgroundColor = "transparent" } = Astro.props;
+
+const formatDate = (date: Date | string) => {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+};
+---
+
+<section
+  class="masonry-container"
+  style={`background-color: ${backgroundColor};`}
+>
+  {
+    posts.map((post) => (
+      <article class="masonry-card">
+        <a href={`/held-in-silence/${post.id}`}>
+          {post.data.coverImage && (
+            <div class="image-wrapper">
+              <img src={post.data.coverImage.src} alt={post.data.title} />
+            </div>
+          )}
+          <div class="card-content">
+            <h3>{post.data.title}</h3>
+            <p class="alt-post-excerpt" set:html={post.data.excerpt || ""} />
+            <span class="read-more">Read More</span>
+          </div>
+        </a>
+      </article>
+    ))
+  }
+</section>

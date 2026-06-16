@@ -1,0 +1,70 @@
+.masonry-container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  column-count: 2;
+  /* Forces exactly 2 vertical columns */
+  column-gap: 4rem;
+  /* Horizontal space between the columns */
+}
+
+.masonry-card {
+  display: inline-block;
+  /* Crucial: prevents cards from splitting across columns */
+  width: 100%;
+  /* Spans the full width of its column */
+  margin-bottom: 4rem;
+  /* Vertical space between posts in the same column */
+}
+
+.masonry-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  /* Let images scale proportionally */
+  display: block;
+}
+
+.card-content {
+  padding-top: 1.5rem;
+}
+
+h3 {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  margin: 0.5rem 0;
+}
+
+p {
+  font-style: italic;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.alt-post-excerpt {
+  font-size: 1.2rem;
+  text-align: justify;
+  letter-spacing: .01em;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
