@@ -1,93 +1,202 @@
 ---
-title: "Magnificent Tales of Doomed Kingdoms"
-date: 2025-11-20
+// src/pages/magnificent-tales/index.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import "../styles/pages/magnificent-tales-of-doomed-kingdoms.css";
+
+const HeaderBannerColor = "var(--color-text-light)";
+const HeaderTaglineColor = "var(--color-text-light-muted)";
+const HeaderNavLinkColor = "var(--color-text-light)";
+const backgroundColor = "var(--canvas-magnificent-tales)";
+
+// import goldSeal from "../../assets/gold-seal.png"; // If you have the award badge asset isolated
 ---
 
-data-sqsp-section="fluid-engine"
+<BaseLayout
+  title="Magnificent Tales of Doomed Kingdoms | Rupendra Dhillon"
+  description="An ambitious, challenging book that brilliantly evokes a classical mood and time period."
+  backgroundColor={backgroundColor}
+  HeaderBannerColor={HeaderBannerColor}
+  HeaderTaglineColor={HeaderTaglineColor}
+  HeaderNavLinkColor={HeaderNavLinkColor}
+>
+  <div class="tales-landing">
+    <header class="tales-header">
+      <span class="sub-banner">THE REVIEWS ARE IN !</span>
+    </header>
 
-\>
+    <section class="reviews-container">
+      <div class="review-featured">
+        <span class="drop-cap">K</span>
+        <blockquote>
+          "An ambitious, challenging book that brilliantly evokes a classical
+          mood and time period."
+          <cite>— Kirkus Reviews</cite>
+        </blockquote>
+      </div>
 
-# THE REVIEWS ARE IN !
+      <div class="review-row review-with-seal">
+        <div class="review-text-block">
+          <p>
+            "Author Rupendra Dhillon captures an adventurous spirit that we
+            often only associate with classic literature like the tales of Ali
+            Baba, King Arthur, and the works of Chaucer."
+          </p>
+        </div>
 
-* * *
+        <div class="review-seal-block">
+          <img
+            src="/images/2025-11-20-magnificent-tales-of-doomed-kingdoms/5star-shiny-web.png"
+            alt="Readers' Favorite Five Stars Award Seal"
+            class="award-seal"
+          />
+        </div>
+      </div>
 
-data-sqsp-section="fluid-engine"
+      <div class="review-row text-right font-serif-wide">
+        <p>
+          "Imagine Game of Thrones without the fantastical elements, and you
+          will end up with something like the Magnificent Tales of Doomed
+          Kingdoms."
+        </p>
+      </div>
 
-\>
+      <div class="review-row text-left italic-light">
+        <p>
+          "I appreciated Dhillon's ability to reveal the humanity, the good, and
+          the bad in these characters... There is more to nobility than being
+          born into it."
+        </p>
+      </div>
 
-### What Reviewers Are Saying
+      <div class="review-row text-right italic-light">
+        <p>
+          “... a real treat for fans of historical prose with an element of
+          suspense and family drama.”
+        </p>
+        <p class="source-subtext">— Readers' Favorite</p>
+      </div>
+    </section>
 
-K
+    <section class="philosophical-teasers">
+      <div class="teaser-block center-align">
+        <p>Have you ever thought how being a ruler felt like?</p>
+      </div>
 
-### _“An ambitious, challenging book that brilliantly evokes a classical mood and time period.”_
+      <div class="teaser-block right-align teaser-with-image">
+        <div class="teaster-block-image-block">
+          <img
+            src="/images/2025-11-20-magnificent-tales-of-doomed-kingdoms/GettyImages-1372599733-WebOptimized.jpg"
+            alt="Readers' Favorite Five Stars Award Seal"
+            class="teaster-block-image"
+          />
+        </div>
+        <div class="teaster-block-text">
+          <p>
+            Have you ever imagined the pain of a ruler who had to discipline
+            their children?
+          </p>
+        </div>
+      </div>
 
-#### — Kirkus Reviews
+      <div class="teaser-block left-align teaser-with-image">
+        <div class="teaster-block-text">
+          <p>
+            How can war, death, hunger, sickness, murder, and grief ruin a
+            kingdom at the peak of its glory?
+          </p>
+        </div>
+        <div class="teaster-block-image-block">
+          <img
+            src="/images/2025-11-20-magnificent-tales-of-doomed-kingdoms/GettyImages-1356605472-WebOptimized.jpg"
+            alt="Readers' Favorite Five Stars Award Seal"
+            class="teaster-block-image"
+          />
+        </div>
+      </div>
 
-* * *
+      <div class="teaser-block center-align">
+        <div class="teaster-block-text">
+          <p>What would you sacrifice for your country and your dynasty?</p>
+        </div>
+        <div
+          class="teaster-block-image-block teaster-block-image-block-center-aligned"
+        >
+          <img
+            src="/images/2025-11-20-magnificent-tales-of-doomed-kingdoms/GettyImages-1374547257-WebOptimized.jpg"
+            alt="Readers' Favorite Five Stars Award Seal"
+            class="teaster-block-image-center-aligned"
+          />
+        </div>
+      </div>
+    </section>
 
-![Badge with the text 'Readers' Favorite Five Stars' surrounding a heart and book logo, decorated with stars and laurels.](images/2025-11-20-magnificent-tales-of-doomed-kingdoms/5star-shiny-web.png)
+    <section class="book-showcase-module">
+      <div class="showcase-grid">
+        <div class="cover-column">
+          <Image
+            src="/images/2025-11-20-magnificent-tales-of-doomed-kingdoms/Magnificent+Tales+of+Doomed+Kingdoms_Front+Cover_V2_JPG.jpg"
+            alt="Magnificent Tales of Doomed Kingdoms Book Cover"
+            class="showcase-cover"
+            width={400}
+            height={600}
+          />
+        </div>
 
-### _“Author Rupendra Dhillon captures an adventurous spirit that we often only associate with classic literature like the tales of Ali Baba, King Arthur, and the works of Chaucer.”_
+        <div class="details-column">
+          <h1 class="book-main-title">Magnificent Tales of Doomed Kingdoms</h1>
+          <p class="author-attribution">BY RUPENDRA DHILLON</p>
 
-### _“Imagine Game of Thrones without the fantastical elements, and you will end up with something like the Magnificent Tales of Doomed Kingdoms.”_
+          <div class="book-synopsis">
+            <p>
+              The book starts from a tale of the unexpected turns a war can take
+              and how various relationships can ruin a kingdom at the peak of
+              its glory. It is a tale of death, war, hunger, sickness, murder,
+              and grief but it also speaks of victory, sacrifice, loyalty, and
+              love.
+            </p>
+            <p>
+              Next, we recount the sacrifices that the rulers and their families
+              have to make to grow their kingdom from modest beginnings to
+              powerful empires. It talks of children who had outgrow their
+              childhood in days to assume the role of a ruler and the years
+              spent living away from their families so that the kingdom can
+              prosper.
+            </p>
+            <p>
+              Finally, we go through the personal struggles of the rulers trying
+              to bring up their children so that they can become rightful rulers
+              in a world surrounded by their enemies. It tells of victories that
+              are worth nothing compared to the unrecoverable losses. It talks
+              of acts that would otherwise be considered unimaginable and of the
+              turns of fate that can spell disaster for the kingdom.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-### _“I appreciated Dhillon's ability to reveal the humanity, the good, and the bad in these characters. There is more to nobility than being born into it.”_
+    <section class="amazon-purchase-section">
+      <h2 class="purchase-heading"><a href="#">Buy Kindle eBook</a></h2>
 
-### _“... a real treat for fans of historical prose with an element of suspense and family drama.”_
-
-#### — Readers' Favorite
-
-* * *
-
-data-sqsp-section="fluid-engine"
-
-\>
-
-## **Have you ever thought how being a ruler felt like?**
-
-![A line drawing of a centaur-like figure with the upper body of a woman and the lower body of a horse, wielding a spear and shield, with a flag attached to the spear, standing on clouds. The caption below reads "Estrofa 86."](images/2025-11-20-magnificent-tales-of-doomed-kingdoms/GettyImages-1372599733-WebOptimized.jpg)
-
-## **Have you ever imagined the pain of a ruler who had to discipline their children?**
-
-![A detailed black and white illustration of a medieval sword with a unique hilt design, featuring a circular guard with four protruding arms, each ending with a small, rounded ornament. The sword's grip is textured, and the pommel is rounded with a decorative top.](images/2025-11-20-magnificent-tales-of-doomed-kingdoms/GettyImages-1356605472-WebOptimized.jpg)
-
-## **How can war, death, hunger, sickness, murder, and grief ruin a kingdom at the peak of its glory?**
-
-![A black and white sketch of a castle on a mountain with two people fishing in a river in the foreground.](images/2025-11-20-magnificent-tales-of-doomed-kingdoms/GettyImages-1374547257-WebOptimized.jpg)
-
-## **What would you sacrifice for your country and your dynasty?**
-
-data-sqsp-section="fluid-engine"
-
-\>
-
-![Book cover for 'Magnificent Tales of Doomed Kingdoms' by Rupendra Dhillon. The cover features a black and white illustration of a regal figure in robes, standing over a fallen warrior on a background of ruins, with ornate borders.](images/2025-11-20-magnificent-tales-of-doomed-kingdoms/Magnificent+Tales+of+Doomed+Kingdoms_Front+Cover_V2_JPG.jpg)
-
-# **Magnificent Tales of Doomed Kingdoms**
-
-### BY  
-RUPENDRA DHILLON
-
-![Gold badge with starburst edges, inscribed with Amazon Best Seller #1](images/2025-11-20-magnificent-tales-of-doomed-kingdoms/Amazon+bestseller+1.png)
-
-The book starts from a tale of the unexpected turns a war can take and how various relationships can ruin a kingdom at the peak of its glory. It is a tale of death, war, hunger, sickness, murder, and grief but it also speaks of victory, sacrifice, loyalty, and love.
-
-Next, we recount the sacrifices that the rulers and their families have to make to grow their kingdom from modest beginnings to powerful empires. It talks of children who had outgrow their childhood in days to assume the role of a ruler and the years spent living away from their families so that the kingdom can prosper.
-
-Finally, we go through the personal struggles of the rulers trying to bring up their children so that they can become rightful rulers in a world surrounded by their enemies. It tells of victories that are worth nothing compared to the unrecoverable losses. It talks of acts that would otherwise be considered unimaginable and of the turns of fate that can spell disaster for the kingdom.
-
-## Buy Kindle eBook
-
-data-sqsp-section="fluid-engine"
-
-\>
-
-## Subscribe for updates
-
-Sign up with your email address to receive news and updates.
-
-Email Address 
-
-Sign Up
-
-Thank you for subscribing!
+      <div class="amazon-buttons-grid">
+        <a href="https://www.amazon.com/dp/B0BKFC7C2M" class="amazon-btn"
+          >BUY ON<br />AMAZON.COM</a
+        >
+        <a href="https://www.amazon.ca/dp/B0BKFC7C2M" class="amazon-btn"
+          >BUY ON<br />AMAZON.CA</a
+        >
+        <a href="http://www.amazon.co.uk/dp/B0BKFC7C2M" class="amazon-btn"
+          >BUY ON<br />AMAZON.CO.UK</a
+        >
+        <a href="https://www.amazon.in/dp/B0BKFC7C2M" class="amazon-btn"
+          >BUY ON<br />AMAZON.IN</a
+        >
+        <a href="http://www.amazon.com.au/dp/B0BKFC7C2M" class="amazon-btn"
+          >BUY ON<br />AMAZON.COM.AU</a
+        >
+      </div>
+    </section>
+    <!-- TODO: Implement email subscription mechanism later -->
+  </div>
+</BaseLayout>

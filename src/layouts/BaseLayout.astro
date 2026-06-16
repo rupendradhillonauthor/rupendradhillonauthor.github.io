@@ -12,6 +12,9 @@ interface Props {
   description?: string;
   pageType?: "wide" | "narrow" | "standard";
   backgroundColor?: string; // 1. Added the prop here
+  HeaderBannerColor?: string;
+  HeaderTaglineColor?: string;
+  HeaderNavLinkColor?: string;
 }
 
 const {
@@ -19,6 +22,9 @@ const {
   description = SITE_DESCRIPTION,
   pageType = "standard",
   backgroundColor = "transparent", // 2. Set a safe default
+  HeaderBannerColor = "var(--color-text-dark)",
+  HeaderTaglineColor = "var(--color-text-dark)",
+  HeaderNavLinkColor = "var(--color-text-dark)",
 } = Astro.props;
 ---
 
@@ -38,7 +44,12 @@ const {
   </head>
   <body style={`background-color: ${backgroundColor};`}>
     <div class="base-layout-container">
-      <Header backgroundColor={backgroundColor} />
+      <Header
+        backgroundColor={backgroundColor}
+        HeaderBannerColor={HeaderBannerColor}
+        HeaderTaglineColor={HeaderTaglineColor}
+        HeaderNavLinkColor={HeaderNavLinkColor}
+      />
 
       <div class="editorial-page-content has-section-divider">
         <div class="layout-content-inner">

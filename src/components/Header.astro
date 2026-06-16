@@ -7,12 +7,23 @@ import "../styles/components/Header.css";
 
 interface Props {
 	backgroundColor?: string;
+	HeaderBannerColor?: string;
+	HeaderTaglineColor?: string;
+	HeaderNavLinkColor?: string;
 }
 
-const { backgroundColor = "transparent" } = Astro.props;
+const {
+	backgroundColor = "transparent",
+	HeaderBannerColor = "var(--color-text-dark)",
+	HeaderTaglineColor = "var(--color-text-dark)",
+	HeaderNavLinkColor = "var(--color-text-dark)",
+} = Astro.props;
 ---
 
-<header class="editorial-header" style={`--header-bg: ${backgroundColor};`}>
+<header
+	class="editorial-header"
+	style={`--header-bg: ${backgroundColor}; --hBanner-color: ${HeaderBannerColor}; --hTagLine-color:${HeaderTaglineColor}; --hNavLink-color:${HeaderNavLinkColor}`}
+>
 	<div class="header-top-row">
 		<div class="header-banner">
 			<h1><a href="/">{SITE_TITLE}</a></h1>

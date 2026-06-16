@@ -1,0 +1,149 @@
+/* Ensure the hero container stays relative to bound its contents */
+.about-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+/* THE GRADIENT MASK: Blends the image into black starting at 70% */
+.about-hero-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 1) 60%);
+  pointer-events: none;
+  /* Allows clicks to pass through the overlay safely */
+  z-index: 2;
+}
+
+.about-hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ==========================================================================
+   THE OVERLAY MAGIC: Targets the global header ONLY when on the about page
+   ========================================================================== */
+.about-page-theme .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  /* Overriding global values for a floating look */
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+}
+
+/* Force links in the global header to inherit the white text color on this page */
+.about-page-theme .site-header a {
+  color: #FFFFFF !important;
+}
+
+/* Keep the rest of your page layout spacing tight and clear */
+.about-page-wrapper {
+  position: relative;
+  z-index: 5;
+  /* Raises the text layers structurally above the hero image stack */
+
+  max-width: 1200px;
+  /* Negative margin pulls the block up; adjust the -30vh value to your liking */
+  margin: -35vh auto 6rem auto;
+  padding: 0 2rem;
+}
+
+/* Grid layout for the split screen */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  /* Gives the text slightly more breathing room than the image */
+  gap: 6rem;
+  align-items: center;
+  /* Vertically centers the text block relative to the image */
+}
+
+/* Typography styling */
+.about-text-column {
+  max-width: 600px;
+  justify-self: end;
+  /* Pushes text cleanly toward the center gap */
+}
+
+.about-text-column h1 {
+  font-family: "Baskerville", "Garamond", "Georgia", serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+  margin: 0 0 2.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.about-text-column h1 span {
+  border-bottom: 4px solid #a62121;
+}
+
+.about-text-column p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--color-text-light-muted);
+  /* Soft charcoal for better long-form reading */
+  margin-bottom: 1.5rem;
+}
+
+.about-text-column em {
+  font-family: "Baskerville", "Garamond", "Georgia", serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  /* Serifs often need a tiny bump to match sans-serif x-heights visually */
+  color: #222222;
+}
+
+/* Image styling */
+.about-image-column {
+  justify-self: start;
+  width: 100%;
+}
+
+.about-portrait {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  /* Extremely soft, elegant drop shadow */
+  display: block;
+}
+
+/* Mobile responsive stacking */
+@media (max-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .about-text-column {
+    justify-self: center;
+    max-width: 100%;
+  }
+
+  .about-image-column {
+    justify-self: center;
+  }
+
+  .about-portrait {
+    margin: 0 auto;
+  }
+}

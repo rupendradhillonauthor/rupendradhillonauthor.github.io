@@ -1,108 +1,55 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+// src/pages/about.astro
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro"; // Assuming your header component name
+import "../styles/pages/about.css";
 
-const title = "About";
+const backgroundColor = "var(--color-text-dark)";
+const HeaderBannerColor = "var(--color-text-light)";
+const HeaderTaglineColor = "var(--color-text-light-muted)";
+const HeaderNavLinkColor = "var(--color-text-light)";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead
-      title={`${title} | ${SITE_TITLE}`}
-      description={SITE_DESCRIPTION}
+<BaseLayout
+  title="About | Rupendra Dhillon"
+  description="Software developer, systems architect, and author based in Ontario."
+  backgroundColor={backgroundColor}
+  HeaderBannerColor={HeaderBannerColor}
+  HeaderTaglineColor={HeaderTaglineColor}
+  HeaderNavLinkColor={HeaderNavLinkColor}
+>
+  <div class="about-hero-wrapper">
+    <img
+      src="/images/about/Statues.jpg"
+      alt="Scenic Horizon Background"
+      class="about-hero-bg-image"
     />
-  </head>
-  <body>
-    <Header />
+  </div>
 
-    <main class="about-container">
-      <div class="hero-image-wrapper">
-        <img
-          src="/images/2025-08-30-about/Statues.jpg"
-          alt="Statues"
-          class="about-hero"
-        />
-      </div>
-
-      <article class="bio-content">
-        <h1>About Rupendra</h1>
-
+  <main class="about-page-wrapper">
+    <div class="about-grid">
+      <div class="about-text-column">
+        <h1><span>About Me</span></h1>
         <p>
-          Rupendra Dhillon born in New Delhi, India, observed, at a very early
-          age, his father burning the midnight oil on his trusty writing pad and
-          Remington typewriter. Now settled in the rural outskirts of Toronto,
-          Canada, with his wife and two dogs, he has taken up a hobby very
-          similar to his father’s. [cite: 2] His aim is to tell stories that
-          grab the reader’s attention and pack an emotional punch. [cite: 3]
+          I was born in New Delhi, India, observed, at a very early age, my
+          father burning the midnight oil on his trusty writing pad and
+          Remington typewriter.
         </p>
+        <p>
+          Now I am settled in the rural outskirts of Toronto, Canada, with my
+          wife and two dogs. I seem to have taken up a hobby very similar to my
+          father’s. My aim is to tell stories that grab the reader’s attention
+          and pack an emotional punch.
+        </p>
+      </div>
 
-        <hr class="bio-divider" />
-
-        <h3>
-          <em
-            >Curious about future projects, lectures, or collaborations? [cite:
-            4]</em
-          >
-        </h3>
-      </article>
-
-      <div class="footer-image-wrapper">
+      <div class="about-image-column">
         <img
-          src="/images/2025-08-30-about/Square-Blurred-Background-1.jpeg"
-          alt="Decorative background graphic"
-          class="about-footer-img"
+          src="/images/about/portrait.jpeg"
+          alt="Rupendra Dhillon Portrait"
+          class="about-portrait"
         />
       </div>
-    </main>
-
-    <Footer />
-  </body>
-</html>
-
-<style>
-  .about-container {
-    max-width: 750px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    font-family: Georgia, serif;
-    color: #222;
-    line-height: 1.6rem;
-  }
-  .hero-image-wrapper,
-  .footer-image-wrapper {
-    width: 100%;
-    margin: 2rem 0;
-  }
-  .about-hero,
-  .about-footer-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-  }
-  .bio-content h1 {
-    font-size: 2.2rem;
-    font-weight: normal;
-    margin-top: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  .bio-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-  .bio-divider {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 2rem 0;
-  }
-  .bio-content h3 {
-    font-family: "Courier New", Courier, monospace;
-    font-weight: normal;
-    font-size: 1rem;
-    color: #555;
-    text-align: center;
-  }
-</style>
+    </div>
+  </main>
+</BaseLayout>

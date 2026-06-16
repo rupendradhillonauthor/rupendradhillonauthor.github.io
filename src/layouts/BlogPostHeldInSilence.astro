@@ -60,7 +60,7 @@ const formattedDate = new Date(date)
 			<div class="nav-links">
 				{
 					prevPost ? (
-						<a href={`/first-principles/${prevPost.id}`} class="nav-prev">
+						<a href={`/held-in-silence/${prevPost.id}`} class="nav-prev">
 							<span class="nav-label">&larr; Previous</span>
 							<span class="nav-title">{prevPost.data.title}</span>
 						</a>
@@ -71,7 +71,7 @@ const formattedDate = new Date(date)
 
 				{
 					nextPost ? (
-						<a href={`/first-principles/${nextPost.id}`} class="nav-next">
+						<a href={`/held-in-silence/${nextPost.id}`} class="nav-next">
 							<span class="nav-label">Next &rarr;</span>
 							<span class="nav-title">{nextPost.data.title}</span>
 						</a>
