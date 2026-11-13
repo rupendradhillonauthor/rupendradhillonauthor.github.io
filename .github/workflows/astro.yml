@@ -69,7 +69,7 @@ jobs:
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
-            --site "https://rupendradhillonauthor.github.io" \
+            --site "https://rupendradhillon.com" \
             --base "/"
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact

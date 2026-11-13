@@ -1,0 +1,49 @@
+---
+// src/pages/field-readings/[id].astro
+
+import { getCollection, render } from "astro:content";
+import BlogPostLayout from "../../layouts/BlogPost.astro";
+
+// Generate a page for each Field Readings article.
+export async function getStaticPaths() {
+
+  const posts = await getCollection("field-readings");
+
+  // Newest first.
+  const sortedPosts = [...posts].sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime()
+  );
+
+  return sortedPosts.map((post, index) => ({
+    params: { id: post.id },
+
+    props: {
+      post,
+      prevPost: sortedPosts[index + 1] ?? null,
+      nextPost: sortedPosts[index - 1] ?? null,
+    },
+  }));
+}
+
+// Retrieve the article and its navigation references.
+const { post, prevPost, nextPost } = Astro.props;
+
+// Render the Markdown content.
+const { Content } = await render(post);
+
+// Match the existing publication background.
+const publicationThemeColor = "var(--canvas-compass)";
+---
+
+<BlogPostLayout
+  title={post.data.title}
+  date={post.data.date}
+  excerpt={post.data.excerpt}
+  backgroundColor={publicationThemeColor}
+  backLinkUrl="/field-readings/"
+  backLinkText="Back to Field Readings"
+  prevPost={prevPost}
+  nextPost={nextPost}
+>
+  <Content />
+</BlogPostLayout>
