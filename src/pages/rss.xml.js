@@ -9,9 +9,10 @@ export async function GET(context) {
     const fpPosts = await getCollection('first-principles').catch(() => []);
     const ncPosts = await getCollection('northern-compass').catch(() => []);
     const hisPosts = await getCollection('held-in-silence').catch(() => []);
+		const frPosts = await getCollection('field-readings');
 
     // 2. Combine all posts into a single array and sort them by date (newest first)
-    const allPosts = [...fpPosts, ...ncPosts, ...hisPosts].sort(
+    const allPosts = [...fpPosts, ...ncPosts, ...hisPosts, ...frPosts].sort(
 				(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf() // Updated to .date
 		);
 

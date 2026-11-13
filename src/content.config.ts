@@ -54,9 +54,26 @@ const heldInSilence = defineCollection({
 	}),
 });
 
+// 4. Field Readings Collection
+const fieldReadings = defineCollection({
+	loader: glob({
+		pattern: '**/index.{md,mdx}',
+		base: './src/content/field-readings'
+	}),
+
+	schema: z.object({
+		title: z.string(),
+		date: z.coerce.date(),
+		category: z.string(),
+		tags: z.array(z.string()).optional(),
+		excerpt: z.string().optional(),
+	}),
+});
+
 // Export the three true collections to the engine
 export const collections = {
 	'first-principles': firstPrinciples,
 	'northern-compass': northernCompass,
 	'held-in-silence': heldInSilence,
+	'field-readings': fieldReadings,
 };

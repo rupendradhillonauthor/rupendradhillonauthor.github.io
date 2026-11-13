@@ -1,0 +1,179 @@
+---
+// src/components/FieldReadingsFeed.astro
+
+import type { PublicationPost } from "../types/PublicationPost";
+
+import "../styles/components/FieldReadingsFeed.css";
+
+interface Props {
+  posts: PublicationPost[];
+  categories: string[];
+}
+
+const { posts, categories } = Astro.props;
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString("en-CA", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  });
+
+  // Field Readings visual motifs.
+// F and R appear less frequently than scientific motifs.
+
+const motifPool = [
+  "wave",
+  "grid",
+  "phi",
+  "lambda",
+  "wave",
+  "grid",
+  "phi",
+  "lambda",
+  "wave",
+  "phi",
+  "grid",
+  "lambda",
+  "f",
+  "r",
+];
+
+function getMotif(articleId: string): string {
+  let hash = 0;
+
+  for (const character of articleId) {
+    hash = (
+      hash * 31 + character.charCodeAt(0)
+    ) >>> 0;
+  }
+
+  return motifPool[hash % motifPool.length];
+}
+---
+
+<section class="fr-feed">
+
+  <!-- Category navigation: visual prototype only -->
+  <nav class="fr-categories" aria-label="Filter readings by category">
+    {
+      categories.map((category, index) => (
+        <button
+          type="button"
+          class={`fr-category ${index === 0 ? "active" : ""}`}
+          data-fr-filter={category}
+          aria-pressed={index === 0 ? "true" : "false"}
+        >
+          {category}
+        </button>
+      ))
+    }
+  </nav>
+
+  <!-- Article feed -->
+  {posts.length === 0 && (
+    <p class="fr-empty-state">
+      The first readings are being prepared.
+    </p>
+  )}
+
+  <div class="fr-post-list">
+    {
+      posts.map((post) => (
+        <article
+          class="fr-post"
+          data-fr-category={post.category ?? ""}>
+
+          <!-- Decorative scientific motif -->
+          <img
+            class="fr-post-motif"
+            src={`/images/2025-11-20-landing/Field-Readings-Logo.svg#Sprite-${getMotif(post.id)}`}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+          />
+
+          <div class="fr-post-content">
+
+            <div class="fr-post-meta">
+              {post.category && (
+                <span class="fr-post-category">{post.category}</span>
+              )}
+              <span class="fr-meta-separator">·</span>
+              <time datetime={post.date.toISOString().slice(0, 10)}>
+                {formatDate(post.date)}
+              </time>
+            </div>
+
+            <h2 class="fr-post-title">
+              <a href={post.url}>
+                {post.title}
+              </a>
+            </h2>
+
+            {post.excerpt && (
+              <p class="fr-post-excerpt">
+                {post.excerpt}
+              </p>
+            )}
+
+            {post.tags.length > 1 && (
+              <div class="fr-post-tags">
+                {post.tags.map((tag) => (
+                  <span>{tag}</span>
+                ))}
+              </div>
+            )}
+
+          </div>
+
+        </article>
+      ))
+    }
+  </div>
+
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>(".fr-feed").forEach((feed) => {
+
+    const buttons =
+      feed.querySelectorAll<HTMLButtonElement>(".fr-category");
+
+    const articles =
+      feed.querySelectorAll<HTMLElement>(".fr-post");
+
+    buttons.forEach((button) => {
+
+      button.addEventListener("click", () => {
+
+        const selectedCategory = button.dataset.frFilter;
+
+        // Update active filter.
+        buttons.forEach((filterButton) => {
+
+          const isActive = filterButton === button;
+
+          filterButton.classList.toggle("active", isActive);
+
+          filterButton.setAttribute(
+            "aria-pressed",
+            String(isActive)
+          );
+        });
+
+        // Show only articles matching the selected category.
+        articles.forEach((article) => {
+
+          const matches =
+            selectedCategory === "All Readings" ||
+            article.dataset.frCategory === selectedCategory;
+
+          article.hidden = !matches;
+        });
+
+      });
+    });
+  });
+</script>

@@ -1,0 +1,71 @@
+---
+// src/pages/field-readings/index.astro
+
+import type { PublicationPost } from "../../types/PublicationPost";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogHeader from "../../components/BlogHeader.astro";
+import FieldReadingsFeed from "../../components/FieldReadingsFeed.astro";
+
+import "../../styles/pages/field-readings.css";
+
+import { getCollection } from "astro:content";
+
+const publicationThemeColor = "var(--canvas-compass)";
+
+// Retrieve collection entries.
+const posts = await getCollection("field-readings");
+
+// Transform into the common publication interface.
+const feedPosts: PublicationPost[] = posts
+  .map((entry) => ({
+    id: entry.id,
+    url: `/field-readings/${entry.id}/`,
+
+    title: entry.data.title,
+    date: entry.data.date,
+
+    category: entry.data.category,
+    tags: entry.data.tags ?? [],
+    excerpt: entry.data.excerpt,
+  }))
+  .sort(
+    (a, b) => b.date.valueOf() - a.date.valueOf()
+  );
+
+  // Derive available categories from the articles.
+  const categories = [
+    "All Readings",
+    ...Array.from(
+      new Set(
+        feedPosts
+          .map((post) => post.category)
+          .filter((category): category is string => Boolean(category))
+      )
+    ).sort((a, b) => a.localeCompare(b)),
+  ];
+---
+
+<BaseLayout
+  title="Field Readings"
+  pageType="wide"
+  backgroundColor={publicationThemeColor}
+>
+  <div class="fr-page-surface">
+
+    <div class="fr-masthead">
+      <BlogHeader
+        title="Field Readings"
+        manifesto="Observations. Interpretations. Possibility Tracing."
+        logoSrc="/images/2025-11-20-landing/Field-Readings-Logo.svg"
+        logoAlt="Field Readings Logo"
+        logoWidth="150"
+      />
+    </div>
+
+    <FieldReadingsFeed
+      posts={feedPosts}
+      categories={categories}
+    />
+
+  </div>
+</BaseLayout>

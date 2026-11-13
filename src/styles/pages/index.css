@@ -34,33 +34,49 @@
 /* src/styles/pages/index.css */
 
 .blog-directory-grid {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; */
   /* Spreads cards out to use full space */
-  gap: 3rem;
-  max-width: 1450px;
+  /* gap: 3rem;
+  max-width: 1450px; */
   /* Wider container for the 'bloomed' look */
-  margin-top: 0;
+  /* margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
 }
 
 /* Responsive collapse: switch to column on mobile */
 @media (max-width: 768px) {
-  .blog-directory-grid {
+
+  /* .blog-directory-grid {
     flex-direction: column;
     align-items: center;
+  } */
+  .blog-directory-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
   }
 }
 
 /* --- Ensure BlogCard stays vertical --- */
 .blog-card {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   /* Ensures internal spacing between the icon, title, and text */
-  gap: 1rem;
+  /* gap: 1rem; */
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .hero-book-feature {
