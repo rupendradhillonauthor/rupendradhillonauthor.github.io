@@ -1,0 +1,26 @@
+/* Field Readings — Human prompts in published conversations */
+
+.fr-token-exchange-conversation-prompt {
+  box-sizing: border-box;
+  max-width: 94%;
+  margin: 1.5rem 0 1.75rem auto;
+  padding: 1rem 1.25rem;
+
+  background-color: #f5f5f4;
+  border: 1px solid #e8e8e5;
+  border-radius: 14px;
+
+  font-size: 0.98em;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.fr-token-exchange-conversation-prompt> :first-child {
+  margin-top: 0;
+}
+
+.fr-token-exchange-conversation-prompt> :last-child {
+  margin-bottom: 0;
+}

@@ -1,5 +1,5 @@
 ---
-// src/layouts/BlogPostLayout.astro
+// src/layouts/BlogPost.astro
 import BaseLayout from "./BaseLayout.astro";
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
@@ -9,6 +9,7 @@ import "../styles/layouts/BlogPost.css";
 interface Props {
 	title: string;
 	date: Date | string;
+	category?: string;
 	coverImage?: ImageMetadata;
 	excerpt?: string;
 	backgroundColor?: string;
@@ -21,6 +22,7 @@ interface Props {
 const {
 	title,
 	date,
+	category,
 	coverImage,
 	excerpt,
 	backgroundColor = "transparent",
@@ -58,7 +60,14 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 	backgroundColor={backgroundColor}
 	pageType="narrow"
 >
-	<article class="blog-post-article">
+	<article class:list={[
+        "blog-post-article",
+        {
+            "blog-post-article--token-exchange":
+                collectionSlug === "field-readings" &&
+                category === "A Token Exchange",
+        },
+    ]}>
 		<nav class="post-back-nav">
 			<a href={backLinkUrl} class="back-link">&larr; {backLinkText}</a>
 		</nav>

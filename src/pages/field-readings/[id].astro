@@ -4,6 +4,9 @@
 import { getCollection, render } from "astro:content";
 import BlogPostLayout from "../../layouts/BlogPost.astro";
 
+
+import "../../styles/pages/field-readings/index.css";
+
 // Generate a page for each Field Readings article.
 export async function getStaticPaths() {
 
@@ -38,6 +41,7 @@ const publicationThemeColor = "var(--canvas-compass)";
 <BlogPostLayout
   title={post.data.title}
   date={post.data.date}
+  category={post.data.category}
   excerpt={post.data.excerpt}
   backgroundColor={publicationThemeColor}
   backLinkUrl="/field-readings/"
