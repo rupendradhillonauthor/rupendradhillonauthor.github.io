@@ -7,6 +7,15 @@
   padding: 4rem 2rem 8rem 2rem;
 }
 
+/* A Token Exchange — conversational reading layout */
+
+.blog-post-article--token-exchange {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 76ch;
+  margin-inline: auto;
+}
+
 /* Back Navigation */
 .post-back-nav {
   margin-bottom: 3rem;
