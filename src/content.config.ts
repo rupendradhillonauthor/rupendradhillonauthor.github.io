@@ -66,8 +66,10 @@ const fieldReadings = defineCollection({
 		date: z.coerce.date(),
 		category: z.string(),
 		tags: z.array(z.string()).optional(),
-		coverImage: image().optional(), // Matches your real "coverImage" key
 		excerpt: z.string().optional(),
+
+		coverImage: image().optional(),
+		socialImage: image().optional(),
 	}),
 });
 
