@@ -11,6 +11,7 @@ article_tags:
   - Future of Books
   - Human-AI Collaboration
 coverImage: "./images/Bookmark-in-the-Endless-Library.png"
+socialImage: "./images/Smiling-Bookmark-Among-Bookshelves.png"
 excerpt: What began as a conversation about AI writing hundreds of novels somehow spiraled into authors selling entire AI generated universes, humans becoming biological search engines, and the rather peculiar possibility of machines discovering new forms of beauty while secretly putting our artistic tastes to computational use. Somewhere along the way, I also received a friendly beat-down for skipping the numerical exercises at the back of my mathematics textbooks. Apparently, even in a future where machines do all the thinking, I still can't escape my homework.
 created: 2026-11-18
 ---
