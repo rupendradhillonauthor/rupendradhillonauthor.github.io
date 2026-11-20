@@ -219,12 +219,15 @@ import "../styles/components/ConversationNavigator.css";
         const articleBounds = article.getBoundingClientRect();
         const contentBounds = content.getBoundingClientRect();
 
-        const left = articleBounds.right + 28;
+        const isMobile = window.innerWidth < 900;
 
-        // Only show when sufficient horizontal space exists.
-        const hasSpace =
-          window.innerWidth >= 900 &&
-          left + 42 <= window.innerWidth - 12;
+        const left = isMobile
+          ? window.innerWidth - 34 - 8
+          : articleBounds.right + 28;
+
+        const hasSpace = isMobile
+          ? true
+          : left + 42 <= window.innerWidth - 12;
 
         // Show while reading the conversation itself.
         const isReading =
@@ -237,25 +240,6 @@ import "../styles/components/ConversationNavigator.css";
         if (navigator.hidden) return;
 
         navigator.style.left = `${left}px`;
-
-        // const trackHeight = track.clientHeight;
-        // const contentHeight = Math.max(1, contentBounds.height);
-
-        // // Position markers proportionally to their article locations.
-        // markers.forEach((marker, index) => {
-        //   const promptBounds = prompts[index].getBoundingClientRect();
-
-        //   const relativePosition =
-        //     (promptBounds.top - contentBounds.top) / contentHeight;
-
-        //   const fraction = Math.max(
-        //     0,
-        //     Math.min(1, relativePosition)
-        //   );
-
-        //   marker.style.top =
-        //     `${12 + fraction * (trackHeight - 24)}px`;
-        // });
 
         const trackHeight = track.clientHeight;
 

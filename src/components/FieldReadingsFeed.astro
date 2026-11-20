@@ -85,14 +85,7 @@ function getMotif(articleId: string): string {
           class="fr-post"
           data-fr-category={post.category ?? ""}>
 
-          <!-- Decorative scientific motif -->
-          <img
-            class="fr-post-motif"
-            src={`/images/2025-11-20-landing/Field-Readings-Logo.svg#Sprite-${getMotif(post.id)}`}
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-          />
+
 
           <div class="fr-post-content">
 
@@ -111,6 +104,15 @@ function getMotif(articleId: string): string {
                 {post.title}
               </a>
             </h2>
+
+            <!-- Decorative scientific motif -->
+            <img
+              class="fr-post-motif"
+              src={`/images/branding/Field-Readings-Logo.svg#Sprite-${getMotif(post.id)}`}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
 
             {post.excerpt && (
               <p class="fr-post-excerpt">

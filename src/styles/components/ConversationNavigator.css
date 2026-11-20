@@ -132,7 +132,14 @@
 
 @media (max-width: 899px) {
   .conversation-navigator {
-    display: none;
+    width: 34px;
+    height: 152px;
+    background: rgba(250, 250, 250, 0.88);
+  }
+
+  .conversation-navigator__marker {
+    left: 2px;
+    width: 28px;
   }
 }
 
