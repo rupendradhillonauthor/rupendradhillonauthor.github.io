@@ -3,19 +3,60 @@
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
-import FallbackImage from '../assets/blog-placeholder-1.jpg';
 import { SITE_TITLE } from '../consts';
 import { Font } from 'astro:assets';
 
 interface Props {
 	title: string;
 	description: string;
-	image?: ImageMetadata;
+	image?: ImageMetadata | string;
+	contentType?: "website" | "article";
 }
+
+const {
+  title,
+  description,
+  image,
+  contentType = "website",
+} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = FallbackImage } = Astro.props;
+// Default site-wide social image.
+const defaultSocialImage = "/images/branding/site-social-default.png";
+
+// Blog-specific fallback images.
+const blogSocialImages: Record<string, string> = {
+  "first-principles":
+    "/images/branding/first-principles-social-default.png",
+
+  "northern-compass":
+    "/images/branding/northern-compass-social-default.png",
+
+  "held-in-silence":
+    "/images/branding/held-in-silence-social-default.png",
+
+  "field-readings":
+    "/images/branding/field-readings-social-default.png",
+};
+
+// Identify the blog from the first URL path segment.
+const blogSlug = Astro.url.pathname.split("/").filter(Boolean)[0];
+
+// Select the image using our established hierarchy.
+const selectedImage =
+  image ??
+  blogSocialImages[blogSlug] ??
+  defaultSocialImage;
+
+// Handle both Astro ImageMetadata and static public images.
+const imagePath =
+  typeof selectedImage === "string"
+    ? selectedImage
+    : selectedImage.src;
+
+// Generate an absolute URL against the production domain.
+const socialImageURL = new URL(imagePath, Astro.site);
 ---
 
 <!-- Global Metadata -->
@@ -31,6 +72,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 	href={new URL('rss.xml', Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
 <Font cssVariable="--font-atkinson" preload />
 
@@ -43,15 +85,15 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content={contentType} />
+<meta property="og:url" content={canonicalURL.href} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image.src, Astro.url)} />
+<meta property="og:image" content={socialImageURL.href} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+ <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImageURL.href} />
+<meta property="twitter:url" content={canonicalURL.href} />

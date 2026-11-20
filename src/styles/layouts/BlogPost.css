@@ -69,11 +69,16 @@
 }
 
 .post-cover-image {
-  width: 100%;
+  display: block;
+
+  width: auto;
   height: auto;
+
+  max-width: 100%;
+  max-height: 560px;
+
+  margin: 0 auto;
   border-radius: 4px;
-  /* Optional: adds a tiny, polished curve to the image corners */
-  object-fit: cover;
 }
 
 /* Markdown Content Styling (.post-content targets all the raw markdown tags) */

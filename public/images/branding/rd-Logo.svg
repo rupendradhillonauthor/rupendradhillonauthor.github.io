@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="150mm"
+   height="150mm"
+   viewBox="0 0 150 150"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   sodipodi:docname="rd-Logo.svg"
+   inkscape:export-filename="..\favicon.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#4d4d4d"
+     inkscape:document-units="mm"
+     showguides="false"
+     inkscape:zoom="0.68150253"
+     inkscape:cx="83.638721"
+     inkscape:cy="385.17832"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#ffffff00">
+    <sodipodi:guide
+       position="74.999999,150"
+       orientation="-1,0"
+       id="guide2"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="0,74.999999"
+       orientation="0,1"
+       id="guide3"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2"
+       transform="translate(-54.537679,-60.150023)"
+       style="display:none">
+      <text
+         xml:space="preserve"
+         style="font-size:35.2777px;line-height:1.5;font-family:'Cambria Math';-inkscape-font-specification:'Cambria Math, Normal';text-decoration-color:#000000;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;stroke:#000000;stroke-width:0.001"
+         x="-149.87567"
+         y="182.14297"
+         id="text1"
+         transform="scale(-1,1)"><tspan
+           sodipodi:role="line"
+           id="tspan1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:141.111px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke:#000000;stroke-width:0.001"
+           x="-149.87567"
+           y="182.14297">R</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:141.111px;line-height:1.5;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-decoration-color:#000000;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;stroke:#000000;stroke-width:0.001"
+         x="99.071114"
+         y="182.2081"
+         id="text2"><tspan
+           sodipodi:role="line"
+           id="tspan2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:141.111px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.001"
+           x="99.071114"
+           y="182.2081">D</tspan></text>
+    </g>
+    <rect
+       style="fill:none;stroke-width:0.799999"
+       id="rect1"
+       width="150"
+       height="150"
+       x="0"
+       y="0" />
+    <g
+       id="g4"
+       transform="translate(-54.537679,-60.150023)"
+       style="display:inline">
+      <path
+         id="text3"
+         style="font-size:35.2777px;line-height:1.5;font-family:'Cambria Math';-inkscape-font-specification:'Cambria Math, Normal';text-decoration-color:#000000;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;opacity:1;fill:#000000;stroke:#000000;stroke-width:0.001"
+         d="M -113.28861 88.091987 C -107.88503 88.091987 -104.28362 88.113683 -102.48359 88.157099 L -102.44742 88.157099 L -102.44742 88.158133 C -102.40858 88.159088 -102.37032 88.15974 -102.33321 88.160716 C -95.213353 88.482258 -89.632289 89.446887 -85.590047 91.054597 C -81.042525 92.891979 -77.528522 95.64806 -75.048055 99.322826 C -72.521654 102.95166 -71.258622 107.17799 -71.258622 112.00112 C -71.258622 119.16691 -73.968596 124.90858 -79.388875 129.22643 C -81.04252 130.51259 -82.880079 131.56892 -84.9012 132.39574 C -86.876387 133.22256 -89.540771 134.0038 -92.893994 134.73875 C -90.13792 135.88712 -88.093654 137.08125 -86.761552 138.32148 C -85.705057 139.2861 -84.740428 140.50355 -83.867672 141.97345 C -82.994915 143.39742 -81.685776 145.94628 -79.940263 149.62105 C -75.852086 158.02707 -72.77429 164.18267 -70.707235 168.0871 C -68.594245 171.94561 -66.826104 174.74728 -65.402132 176.49279 C -64.253768 177.91676 -63.151336 178.9047 -62.09484 179.45592 C -60.992411 180.00713 -59.499361 180.37444 -57.616044 180.55818 L -57.616044 182.14309 L -80.49165 182.14309 C -81.640015 179.61669 -82.374625 178.00863 -82.696167 177.31962 L -87.519645 166.36421 C -90.413523 159.79557 -93.330203 153.985 -96.270015 148.9322 C -99.209828 143.92533 -101.89701 140.50354 -104.33154 138.66616 C -105.57177 137.74747 -106.90371 137.10404 -108.32768 136.73656 C -109.75165 136.32315 -111.49751 136.11645 -113.56457 136.11645 L -116.91682 136.11645 L -116.91682 160.57283 C -116.91682 165.25816 -116.64121 168.74937 -116.08999 171.0461 C -115.80889 172.29828 -115.38574 173.42971 -114.8203 174.4402 C -114.36823 175.22027 -113.8346 175.92749 -113.21989 176.56204 C -111.97965 177.84821 -110.5555 178.81284 -108.94779 179.45592 C -107.29415 180.05307 -105.13539 180.42037 -102.47119 180.55818 L -102.47119 180.62226 C -102.46323 180.62267 -102.45539 180.62288 -102.44742 180.62329 L -102.44742 182.20821 L -153.36576 182.20821 C -159.29131 182.20821 -165.10188 181.67978 -170.79777 180.62329 C -178.4229 179.19932 -184.7852 175.86923 -189.88394 170.63268 C -193.51277 166.91198 -196.33775 162.24944 -198.35887 156.64543 C -200.42593 150.99547 -201.45946 145.001 -201.45946 138.66203 C -201.45946 129.98039 -199.66801 121.96496 -196.08511 114.61543 C -192.50222 107.21997 -187.49516 101.24829 -181.06432 96.700764 C -174.31194 91.923569 -166.08981 89.167487 -156.39761 88.432534 C -154.72274 88.298544 -151.42328 88.213531 -146.49951 88.177253 L -146.49951 88.091987 L -113.28861 88.091987 z M -141.71479 90.302704 C -147.07145 90.378349 -151.52915 90.903318 -155.08813 91.877802 C -162.16205 93.852989 -168.24874 97.895413 -173.34748 104.00471 C -177.02225 108.41443 -179.84723 113.55877 -181.82242 119.43839 C -183.7976 125.31802 -184.78503 131.5192 -184.78503 138.04191 C -184.78503 143.92153 -183.9582 149.4798 -182.30456 154.71634 C -180.69685 159.90695 -178.33138 164.52339 -175.20783 168.56563 C -172.03835 172.74567 -168.43213 175.77736 -164.38989 177.66068 C -160.39358 179.49806 -155.57044 180.41658 -149.92049 180.41658 C -143.30591 180.41658 -138.52887 178.62513 -135.58906 175.04223 C -134.21103 173.38859 -133.26919 171.39043 -132.76391 169.04777 C -132.35127 167.1346 -132.10731 164.50155 -132.03166 161.14851 C -132.0306 160.93752 -132.03011 160.72389 -132.03011 160.50772 L -132.03011 109.72736 C -132.03011 104.9961 -132.28292 101.50489 -132.7882 99.254096 C -133.29348 97.003302 -134.2809 95.142948 -135.75081 93.673041 C -136.99104 92.340939 -138.43799 91.376311 -140.09163 90.779161 C -140.58907 90.599531 -141.13006 90.440769 -141.71479 90.302704 z M -107.43626 90.482022 C -109.43009 91.018189 -111.0746 91.828015 -112.36929 92.911331 C -114.16074 94.427172 -115.35487 96.356428 -115.95202 98.699091 C -116.5951 101.04175 -116.91682 104.73967 -116.91682 109.79247 L -116.91682 134.60078 L -114.32214 134.60078 C -108.62626 134.60078 -104.56104 134.27906 -102.12651 133.63598 C -99.646039 132.99289 -97.326682 131.66096 -95.167757 129.63984 C -90.344628 125.04638 -87.933057 119.35031 -87.933057 112.55199 C -87.933057 108.92316 -88.644872 105.52417 -90.068844 102.35468 C -91.446881 99.139262 -93.376137 96.49819 -95.856604 94.431135 C -97.785856 92.869359 -100.08242 91.789722 -102.74662 91.192573 C -104.04325 90.879593 -105.6065 90.642679 -107.43626 90.482022 z "
+         transform="scale(-1,1)" />
+    </g>
+  </g>
+</svg>

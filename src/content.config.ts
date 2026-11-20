@@ -61,12 +61,15 @@ const fieldReadings = defineCollection({
 		base: './src/content/field-readings'
 	}),
 
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
 		date: z.coerce.date(),
 		category: z.string(),
 		tags: z.array(z.string()).optional(),
 		excerpt: z.string().optional(),
+
+		coverImage: image().optional(),
+		socialImage: image().optional(),
 	}),
 });
 
