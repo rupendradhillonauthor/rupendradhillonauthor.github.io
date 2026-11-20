@@ -3,6 +3,7 @@
 import BaseLayout from "./BaseLayout.astro";
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
+import ConversationNavigator from "../components/ConversationNavigator.astro";
 
 import "../styles/layouts/BlogPost.css";
 
@@ -39,6 +40,10 @@ const pathname = Astro.url.pathname;
 const pathSegments = pathname.split("/").filter(Boolean);
 const collectionSlug = pathSegments[0] || "blog"; // Fallback to 'blog' if root
 
+const isTokenExchange =
+  collectionSlug === "field-readings" &&
+  category === "A Token Exchange";
+
 // 3. Format a clean display name (e.g., "held-in-silence" becomes "Held In Silence")
 const collectionDisplayName = collectionSlug
 	.split("-")
@@ -61,13 +66,11 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 	pageType="narrow"
 >
 	<article class:list={[
-        "blog-post-article",
-        {
-            "blog-post-article--token-exchange":
-                collectionSlug === "field-readings" &&
-                category === "A Token Exchange",
-        },
-    ]}>
+												"blog-post-article",
+												{
+													"blog-post-article--token-exchange": isTokenExchange,
+												},
+											]}>
 		<nav class="post-back-nav">
 			<a href={backLinkUrl} class="back-link">&larr; {backLinkText}</a>
 		</nav>
@@ -84,8 +87,6 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 							src={coverImage}
 							alt={`Cover image for ${title}`}
 							class="post-cover-image"
-							width={1000}
-							height={560}
 							loading="eager"
 						/>
 					</div>
@@ -93,6 +94,8 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 			}
 		</header>
 
+		{isTokenExchange && <ConversationNavigator />}
+		
 		<div class="post-content">
 			<slot />
 		</div>

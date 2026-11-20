@@ -1,0 +1,143 @@
+/* A Token Exchange — Conversation Navigator */
+
+.conversation-navigator {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 42px;
+  /* Previously 34px */
+  height: 152px;
+  /* Previously 240px */
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(80, 80, 80, 0.16);
+  border-radius: 24px;
+
+  background: rgba(250, 250, 250, 0.78);
+  backdrop-filter: blur(6px);
+
+  z-index: 4;
+}
+
+.conversation-navigator[hidden] {
+  display: none;
+}
+
+/* Marker positioning surface */
+
+.conversation-navigator__markers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Back-to-top navigation marker */
+
+.conversation-navigator__marker--top::after {
+  content: none;
+}
+
+/* Back-to-top marker */
+
+.conversation-navigator__marker.conversation-navigator__marker--top::after {
+  content: none;
+  display: none;
+}
+
+.conversation-navigator__marker--top {
+  color: #888;
+}
+
+.conversation-navigator__marker--top svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.conversation-navigator__marker--top:hover,
+.conversation-navigator__marker--top.is-active {
+  color: #222;
+}
+
+/* Individual prompt navigation targets */
+
+.conversation-navigator__marker {
+  position: absolute;
+  left: 5px;
+  width: 30px;
+  height: 28px;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Horizontal marker lines */
+
+.conversation-navigator__marker::after {
+  content: "";
+
+  width: 16px;
+  /* Previously 12px */
+  height: 2px;
+
+  background: #a0a0a0;
+  border-radius: 2px;
+
+  transition:
+    width 0.15s ease,
+    background-color 0.15s ease;
+}
+
+/* Current conversation position */
+
+.conversation-navigator__marker.is-active::after {
+  width: 22px;
+  /* Previously 20px */
+  background: #222;
+}
+
+/* Hover interaction */
+
+.conversation-navigator__marker:hover::after {
+  width: 20px;
+  background: #555;
+}
+
+/* Keyboard accessibility */
+
+.conversation-navigator__marker:focus-visible {
+  outline: 2px solid #222;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Allow a little breathing room when jumping to prompts */
+
+.fr-token-exchange-conversation-prompt {
+  scroll-margin-top: 1.5rem;
+}
+
+/* First iteration: hide when horizontal space is limited */
+
+@media (max-width: 899px) {
+  .conversation-navigator {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .conversation-navigator__marker::after {
+    transition: none;
+  }
+}
